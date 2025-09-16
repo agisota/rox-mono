@@ -22,23 +22,18 @@ The easiest way to get the font is to download it directly from the **Releases**
 
 ## Preview
 
-### Ioskeley Mono
-
-![Ioskeley Mono Preview](./assets/IoskeleyMono.png)
-
-### Berkeley Mono
-
-![Berkeley Mono Preview](./assets/BerkeleyMono.png)
+| Ioskeley Mono                                                                                                                          | Berkeley Mono                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| ![Iosevka Berkeley Sample](assets/IoskeleyMono.png "Sample code in Ioskeley Mono with slashed zero, straight braces, and serifed l/I") | ![Berkeley Mono Sample](assets/BerkeleyMono.png "Sample code in Berkeley Mono with native glyphs") |
 
 ### Configuration Choices
 
-To achieve the Berkeley Mono aesthetic, the following key variants were selected from Iosevka's available glyphs:
+This configuration uses specific character variants and custom metrics to closely match the look and feel of Berkeley Mono.
 
-- **Numbers:** Dotted zero (`0`) and open-contour `6` and `9`.
-- **Key Characters:** A classic double-storey `a` and a modern single-storey `g`.
-- **Punctuation:** Sharp, square dots for a crisp, technical feel.
-- **Underscore:** Set to `high` for better visibility.
-- **Ligatures:** Standard programming ligatures are enabled.
+- **Custom Metrics:** The font's vertical proportions, letter spacing (`sb`), and parenthesis size have been manually adjusted. This is the key to capturing Berkeley's characteristically compact and geometric feel.
+- **Distinctive Characters:** Key glyphs were chosen to match, including a **single-storey `g`**, **flat-arc parentheses `()`**, and a **two-circle `8`**.
+- **Clarity and Readability:** For the best coding experience, the font uses a **dotted zero**, **open-contour `6` and `9`**, and sharp, **square punctuation**.
+- **High Underscore:** The underscore character is raised to ensure it is clearly visible and never blends with the line below.
 
 For a complete list of all choices made to match Berkeley Mono, see the [`private-build-plans.toml`](./private-build-plans.toml) file.
 
