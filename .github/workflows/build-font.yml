@@ -62,17 +62,17 @@ jobs:
       # 8. Create separate ZIP archives for Desktop and Web users
       - name: Package font files into separate archives
         run: |
-          # Navigate to the output directory to make zipping easier
+          # Navigate into the main output directory
           cd iosevka-src/dist/IoskeleyMono
 
-          # Package the Hinted TTF fonts for desktop
-          zip -r ../../IoskeleyMono-TTF-Hinted.zip TTF
+          # Package the Hinted TTF fonts into the workspace root
+          zip -r ../../../IoskeleyMono-TTF-Hinted.zip TTF
 
-          # Package the Unhinted TTF fonts for desktop
-          zip -r ../../IoskeleyMono-TTF-Unhinted.zip TTF-Unhinted
+          # Package the Unhinted TTF fonts into the workspace root
+          zip -r ../../../IoskeleyMono-TTF-Unhinted.zip TTF-Unhinted
 
-          # Package all WOFF2 fonts for web use
-          zip -r ../../IoskeleyMono-Web.zip WOFF2 WOFF2-Unhinted
+          # Package all WOFF2 fonts into the workspace root
+          zip -r ../../../IoskeleyMono-Web.zip WOFF2 WOFF2-Unhinted
 
       # 9. Set the release version number
       - name: Set Release Version
