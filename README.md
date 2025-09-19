@@ -26,6 +26,8 @@ The easiest way to get the font is to download it directly from the **Releases**
 | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | ![Iosevka Berkeley Sample](assets/IoskeleyMono.png "Sample code in Ioskeley Mono with slashed zero, straight braces, and serifed l/I") | ![Berkeley Mono Sample](assets/BerkeleyMono.png "Sample code in Berkeley Mono with native glyphs") |
 
+> Theme used in preview: [Kintsugi Dark Flared](https://marketplace.visualstudio.com/items?itemName=ahmedhatem.kintsugi)
+
 ### Configuration Choices
 
 This configuration uses specific character variants and custom metrics to closely match the look and feel of Berkeley Mono.
