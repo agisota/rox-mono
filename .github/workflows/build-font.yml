@@ -93,7 +93,7 @@ jobs:
             - `IoskeleyMono-TTF-Unhinted.zip`: Raw fonts without hinting. Preferred by some on high-DPI screens.
 
             **For Web Developers:**
-            - `IoskeleyMono-Web.zip`: Contains all WOFF2 font files for web use.
+            - `IoskeleyMono-Web.zip`: Contains all WOFF2 font files for web use (Hinted and Unhinted).
           files: |
             IoskeleyMono-TTF-Hinted.zip
             IoskeleyMono-TTF-Unhinted.zip
