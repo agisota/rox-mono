@@ -78,11 +78,11 @@ caret = "medium"
 ascii-grave = "straight"
 ascii-single-quote = "straight"
 paren = "flat-arc"
-brace = "curly"
+brace = "curly-flat-boundary"
 guillemet = "straight"
 number-sign = "slanted"
 ampersand = "closed"
-at = "threefold"
+at = "fourfold"
 dollar = "through"
 cent = "through-cap"
 percent = "rings-continuous-slash"
@@ -141,7 +141,7 @@ menu = "upright"
 css = "normal"
 
 [buildPlans.IoskeleyMono.slopes.Italic]
-angle = 9.4
+angle = 11.8
 shape = "italic"
 menu = "italic"
 css = "italic"
