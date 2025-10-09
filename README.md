@@ -22,11 +22,17 @@ The easiest way to get the font is to download it directly from the **Releases**
 
 ## Preview
 
-| Ioskeley Mono                                                                                                                          | Berkeley Mono                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| ![Iosevka Berkeley Sample](assets/IoskeleyMono.png "Sample code in Ioskeley Mono with slashed zero, straight braces, and serifed l/I") | ![Berkeley Mono Sample](assets/BerkeleyMono.png "Sample code in Berkeley Mono with native glyphs") |
+| Ioskeley Mono                                                                   | Berkeley Mono                                                                   |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| ![Ioskeley Mono Sample](assets/IoskeleyMono.png "Sample code in Ioskeley Mono") | ![Berkeley Mono Sample](assets/BerkeleyMono.png "Sample code in Berkeley Mono") |
 
 > Theme used in preview: [Kintsugi Dark Flared](https://marketplace.visualstudio.com/items?itemName=ahmedhatem.kintsugi)
+
+---
+
+### In Action
+
+![Ioskeley Mono in Action](assets/InAction.png "Ioskeley Mono in real use")
 
 ### Configuration Choices
 
