@@ -1,5 +1,7 @@
 # IoskeleyMono
 
+![Ioskeley Mono Cover](assets/SocialPreview.png)
+
 The goal of this project is to configure the [Iosevka](https://github.com/be5invis/Iosevka) typeface to mimic the look and feel of **Berkeley Mono** as closely as possible.
 
 It uses Iosevka's extensive build options to select character variants that replicate the distinct aesthetic of Berkeley Mono, creating a free, open-source alternative for fans of that particular style.
