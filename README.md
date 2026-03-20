@@ -41,24 +41,23 @@ Download the latest release from the [Releases page](https://github.com/ahatem/I
 | `Normal` | Default — works everywhere |
 | `SemiCondensed` | More columns without sacrificing readability |
 | `Condensed` | Maximum density |
-| `ExtraCondensed` | Ultra-narrow for very wide monitors or split panes |
 
-Not sure? Start with **Normal**.
+> Not sure? Start with **Normal**.
 
-### Installing
+### Installing the fonts
 
 1. Download and unzip your chosen file
-2. Select all `.ttf` files
+2. Select all `.ttf` files inside
 3. Install on your system:
-   - **macOS** — double-click any font → click Install Font, or drag all files into Font Book
-   - **Windows** — select all files → right-click → Install
+   - **macOS** — double-click any font → Install Font, or drag all into Font Book
+   - **Windows** — select all → right-click → Install
    - **Linux** — copy to `~/.local/share/fonts/` then run `fc-cache -fv`
 
 ---
 
 ## Weights
 
-Ioskeley Mono ships with 10 weights matching Berkeley Mono's full weight axis:
+Ioskeley Mono matches Berkeley Mono's full weight axis across all widths:
 
 | Weight | CSS value |
 |---|---|
@@ -79,9 +78,9 @@ Every weight is available in both **Upright** and **Italic**.
 
 ## Design Choices
 
-Ioskeley Mono uses specific character variants and custom metrics to match Berkeley Mono's aesthetic.
+Ioskeley Mono uses specific character variants and custom metrics to closely match Berkeley Mono's aesthetic.
 
-**Custom metrics** — vertical proportions, letter spacing, and parenthesis size are manually tuned to capture Berkeley's compact, geometric feel.
+**Custom metrics** — vertical proportions, letter spacing, and parenthesis size are tuned to capture Berkeley's compact, geometric feel.
 
 **Distinctive glyphs** — single-storey `g`, flat-arc parentheses `()`, two-circle `8`, dotted `0`, open-contour `6` and `9`, square punctuation dots, and a raised underscore.
 
@@ -95,7 +94,7 @@ The font is built automatically via GitHub Actions on every version tag push. To
 
 ```bash
 git clone https://github.com/ahatem/IoskeleyMono.git
-git clone https://github.com/be5invis/Iosevka.git
+git clone --depth 1 https://github.com/be5invis/Iosevka.git
 
 cp IoskeleyMono/private-build-plans.toml Iosevka/
 cd Iosevka
@@ -104,6 +103,12 @@ npm run build -- contents::IoskeleyMono
 ```
 
 Output will be in `Iosevka/dist/IoskeleyMono/`.
+
+---
+
+## Contributing
+
+This project is just a build configuration on top of Iosevka — changes are often just a few lines in `private-build-plans.toml`. If you spot something off or have an idea, open an issue or send a PR. All contributions are welcome!
 
 ---
 

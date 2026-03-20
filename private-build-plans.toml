@@ -101,7 +101,12 @@ lig-single-arrow-bar = "without-notch"
 
 # ============================================================
 # WEIGHTS
+# Matching Berkeley Mono's full weight axis:
+#   100 Thin · 200 ExtraLight · 300 Light · 350 SemiLight
+#   400 Regular · 500 Medium · 600 SemiBold · 700 Bold
+#   800 ExtraBold · 900 Black
 # ============================================================
+
 [buildPlans.IoskeleyMono.weights.Thin]
 shape = 100
 menu = 100
@@ -154,12 +159,11 @@ css = 900
 
 # ============================================================
 # WIDTHS
+# Matching Berkeley Mono's width axis (wdth 80–100):
+#   80 = Condensed     → shape 480  (600 × 0.80)
+#   90 = SemiCondensed → shape 540  (600 × 0.90)
+#   100 = Normal       → shape 600
 # ============================================================
-
-[buildPlans.IoskeleyMono.widths.ExtraCondensed]
-shape = 420
-menu = 2
-css = "extra-condensed"
 
 [buildPlans.IoskeleyMono.widths.Condensed]
 shape = 480
@@ -200,7 +204,7 @@ css = "italic"
 xHeight = 520
 cap = 690
 ascender = 740
-sb = 85 # Perfect
+sb = 85
 
 accentWidth = 182
 accentClearance = 76
@@ -218,4 +222,3 @@ essRatioLower = 1.03
 essRatioQuestion = 1.03
 archDepth = 152
 smallArchDepth = 157
-
