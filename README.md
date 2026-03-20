@@ -41,6 +41,7 @@ Download the latest release from the [Releases page](https://github.com/ahatem/I
 | `Normal` | Default — works everywhere |
 | `SemiCondensed` | More columns without sacrificing readability |
 | `Condensed` | Maximum density |
+| `ExtraCondensed` | Ultra-narrow for very wide monitors or split panes |
 
 Not sure? Start with **Normal**.
 

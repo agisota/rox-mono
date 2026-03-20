@@ -156,6 +156,11 @@ css = 900
 # WIDTHS
 # ============================================================
 
+[buildPlans.IoskeleyMono.widths.ExtraCondensed]
+shape = 420
+menu = 2
+css = "extra-condensed"
+
 [buildPlans.IoskeleyMono.widths.Condensed]
 shape = 480
 menu = 3
