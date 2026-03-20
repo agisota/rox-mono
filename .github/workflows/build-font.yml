@@ -67,7 +67,8 @@ jobs:
           DIST="iosevka-src/dist/IoskeleyMono/TTF"
           PATCHER="nerd-fonts-patcher/font-patcher"
 
-          for font in "$DIST"/IoskeleyMono-[A-Z]*.ttf; do
+          for font in "$DIST"/IoskeleyMono-*.ttf; do
+            [[ "$font" == *Condensed* ]] && continue
             fontforge -script "$PATCHER" "$font" --complete --careful --outputdir patched-fonts/Normal
           done
 
@@ -86,7 +87,8 @@ jobs:
 
           mkdir -p pkg-ttf/Normal pkg-ttf/SemiCondensed pkg-ttf/Condensed
 
-          for font in "$DIST"/IoskeleyMono-[A-Z]*.ttf; do
+          for font in "$DIST"/IoskeleyMono-*.ttf; do
+            [[ "$font" == *Condensed* ]] && continue
             cp "$font" pkg-ttf/Normal/
           done
 
