@@ -2,11 +2,14 @@ name: Build and Release Font
 
 on:
   push:
-    branches: ["main"]
-    paths:
-      - "private-build-plans.toml"
-      - ".github/workflows/**"
+    tags:
+      - "v*.*.*"
   workflow_dispatch:
+    inputs:
+      version:
+        description: "Version tag (e.g. v2.0.0) — used for manual test runs"
+        required: false
+        default: "v0.0.0-test"
 
 jobs:
   build:
@@ -15,11 +18,11 @@ jobs:
       contents: write
 
     steps:
-      # 1. Checkout your repository to get the config file
+      # 1. Checkout your repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Checkout the official Iosevka repository to get the build tools
+      # 2. Checkout the official Iosevka source
       - name: Checkout Iosevka source
         uses: actions/checkout@v4
         with:
@@ -27,37 +30,37 @@ jobs:
           path: iosevka-src
           fetch-depth: 1
 
-      # 3. Install system dependencies required by Iosevka and Nerd Fonts patcher
+      # 3. Install system dependencies
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y ttfautohint python3 fontforge
 
-      # 4. Set up Node.js, which is required by the Iosevka build scripts
+      # 4. Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      # 5. Copy your custom build plan into the Iosevka source directory
+      # 5. Copy build plan into Iosevka source
       - name: Copy custom build plan
         run: cp private-build-plans.toml iosevka-src/
 
-      # 6. Install dependencies and build ALL font formats
-      - name: Install dependencies and build all font formats
+      # 6. Build all font formats (TTF hinted/unhinted + WOFF2)
+      - name: Build all font formats
         run: |
           cd iosevka-src
           npm install
           npm run build -- contents::IoskeleyMono
 
-      # 7. Verify build output exists for all formats
+      # 7. Verify build output
       - name: Verify build output
         run: |
           if [ ! -d "iosevka-src/dist/IoskeleyMono/TTF" ] || [ ! -d "iosevka-src/dist/IoskeleyMono/WOFF2" ]; then
             echo "Build output directories (TTF and/or WOFF2) not found!"
             exit 1
           fi
-          echo "TTF and WOFF2 build directories verified."
+          echo "Build output verified."
 
       # 8. Download Nerd Fonts patcher
       - name: Download Nerd Fonts patcher
@@ -67,59 +70,127 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 9. Patch fonts with Nerd Font glyphs
+      # 9. Patch Nerd Fonts — all weights, all 3 widths
       - name: Patch fonts with Nerd Font glyphs
         run: |
-          mkdir -p patched-fonts
-          for font in iosevka-src/dist/IoskeleyMono/TTF/*.ttf; do
+          mkdir -p patched-fonts/Normal patched-fonts/SemiCondensed patched-fonts/Condensed
+
+          for font in iosevka-src/dist/IoskeleyMono/TTF/IoskeleyMono-*.ttf; do
             fontforge -script nerd-fonts-patcher/font-patcher "$font" \
-              --complete \
-              --careful \
-              --outputdir patched-fonts
+              --complete --careful --outputdir patched-fonts/Normal
           done
 
-      # 10. Create separate ZIP archives for Desktop and Web users
-      - name: Package font files into separate archives
+          for font in iosevka-src/dist/IoskeleyMono/TTF/IoskeleyMonoSemiCondensed-*.ttf; do
+            fontforge -script nerd-fonts-patcher/font-patcher "$font" \
+              --complete --careful --outputdir patched-fonts/SemiCondensed
+          done
+
+          for font in iosevka-src/dist/IoskeleyMono/TTF/IoskeleyMonoCondensed-*.ttf; do
+            fontforge -script nerd-fonts-patcher/font-patcher "$font" \
+              --complete --careful --outputdir patched-fonts/Condensed
+          done
+
+      # 10. Package TTF zips — one per width, all weights inside
+      - name: Package TTF archives per width
+        run: |
+          DIST="iosevka-src/dist/IoskeleyMono/TTF"
+
+          # Normal — files with no width suffix in name
+          mkdir -p pkg-ttf/Normal
+          cp "$DIST"/IoskeleyMono-*.ttf pkg-ttf/Normal/ 2>/dev/null || true
+          cd pkg-ttf/Normal && zip -r ../../IoskeleyMono-Normal.zip . && cd ../..
+
+          # SemiCondensed
+          mkdir -p pkg-ttf/SemiCondensed
+          cp "$DIST"/IoskeleyMonoSemiCondensed-*.ttf pkg-ttf/SemiCondensed/ 2>/dev/null || true
+          cd pkg-ttf/SemiCondensed && zip -r ../../IoskeleyMono-SemiCondensed.zip . && cd ../..
+
+          # Condensed
+          mkdir -p pkg-ttf/Condensed
+          cp "$DIST"/IoskeleyMonoCondensed-*.ttf pkg-ttf/Condensed/ 2>/dev/null || true
+          cd pkg-ttf/Condensed && zip -r ../../IoskeleyMono-Condensed.zip . && cd ../..
+
+      # 11. Package Nerd Font zips — one per width
+      - name: Package Nerd Font archives per width
+        run: |
+          cd patched-fonts/Normal && zip -r ../../IoskeleyMono-NerdFont-Normal.zip . && cd ../..
+          cd patched-fonts/SemiCondensed && zip -r ../../IoskeleyMono-NerdFont-SemiCondensed.zip . && cd ../..
+          cd patched-fonts/Condensed && zip -r ../../IoskeleyMono-NerdFont-Condensed.zip . && cd ../..
+
+      # 12. Package Web fonts (all widths + weights together — web devs use CSS to select)
+      - name: Package Web archive
         run: |
           cd iosevka-src/dist/IoskeleyMono
-
-          zip -r ../../../IoskeleyMono-TTF-Hinted.zip TTF
-          zip -r ../../../IoskeleyMono-TTF-Unhinted.zip TTF-Unhinted
           zip -r ../../../IoskeleyMono-Web.zip WOFF2 WOFF2-Unhinted
 
-      # 11. Package Nerd Font patched fonts
-      - name: Package Nerd Font patched fonts
-        run: |
-          cd patched-fonts
-          zip -r ../IoskeleyMono-NerdFont.zip .
-
-      # 12. Set release version number
-      - name: Set Release Version
+      # 13. Determine version tag
+      - name: Set release version
         id: vars
-        run: echo "tag=$(date +'%Y.%m.%d')-${{ github.run_number }}" >> $GITHUB_OUTPUT
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "tag=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
 
-      # 13. Create a new GitHub Release and upload all ZIP files
+      # 14. Create GitHub Release and upload all zips
       - name: Create Release and Upload Assets
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.vars.outputs.tag }}
-          name: "Release ${{ steps.vars.outputs.tag }}"
+          name: "Ioskeley Mono ${{ steps.vars.outputs.tag }}"
           body: |
-            Automated build triggered by commit ${{ github.sha }}.
+            ## Ioskeley Mono ${{ steps.vars.outputs.tag }}
 
-            **For Desktop Users:**
-            - `IoskeleyMono-TTF-Hinted.zip`: Fonts with hinting. Best for most users on standard-resolution screens.
-            - `IoskeleyMono-TTF-Unhinted.zip`: Raw fonts without hinting. Preferred by some on high-DPI screens.
+            A free, open-source alternative to Berkeley Mono — built on [Iosevka](https://github.com/be5invis/Iosevka).
 
-            **For Terminal Users (Nerd Font):**
-            - `IoskeleyMono-NerdFont.zip`: Patched with Nerd Font glyphs (Powerline, devicons, etc.). Ideal for Neovim, iTerm, VS Code terminals, and other tools that use iconic fonts.
+            ---
 
-            **For Web Developers:**
-            - `IoskeleyMono-Web.zip`: Contains all WOFF2 font files for web use (Hinted and Unhinted).
+            ### 🖥️ Desktop — TTF (pick your width)
+
+            | File | Width | Best for |
+            |------|-------|----------|
+            | `IoskeleyMono-Normal.zip` | Normal | Default — works everywhere |
+            | `IoskeleyMono-SemiCondensed.zip` | Semi Condensed | More columns, still readable |
+            | `IoskeleyMono-Condensed.zip` | Condensed | Maximum density |
+
+            Each zip includes all 10 weights: Thin · ExtraLight · Light · SemiLight · Regular · Medium · SemiBold · Bold · ExtraBold · Black — in both Upright and Italic.
+
+            > **Not sure which to pick?** Start with `IoskeleyMono-Normal.zip`.
+            > For high-DPI / Retina screens, unhinted variants are included inside each zip.
+
+            ---
+
+            ### 💻 Terminal — Nerd Font (pick your width)
+
+            | File | Width |
+            |------|-------|
+            | `IoskeleyMono-NerdFont-Normal.zip` | Normal |
+            | `IoskeleyMono-NerdFont-SemiCondensed.zip` | Semi Condensed |
+            | `IoskeleyMono-NerdFont-Condensed.zip` | Condensed |
+
+            Each Nerd Font zip includes Regular + Bold (Upright & Italic), patched with the full Nerd Font glyph set — Powerline, devicons, Font Awesome, Codicons, Material Design, and more.
+
+            Tested in: Kitty · iTerm2 · GNOME Terminal · WezTerm · VS Code integrated terminal.
+
+            ---
+
+            ### 🌐 Web
+
+            | File | Contents |
+            |------|----------|
+            | `IoskeleyMono-Web.zip` | All WOFF2 files (hinted + unhinted) for all widths and weights |
+
+            ---
+
+            **Full changelog:** ${{ github.sha }}
           files: |
-            IoskeleyMono-TTF-Hinted.zip
-            IoskeleyMono-TTF-Unhinted.zip
-            IoskeleyMono-NerdFont.zip
+            IoskeleyMono-Normal.zip
+            IoskeleyMono-SemiCondensed.zip
+            IoskeleyMono-Condensed.zip
+            IoskeleyMono-NerdFont-Normal.zip
+            IoskeleyMono-NerdFont-SemiCondensed.zip
+            IoskeleyMono-NerdFont-Condensed.zip
             IoskeleyMono-Web.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
