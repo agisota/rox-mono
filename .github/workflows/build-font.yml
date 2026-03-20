@@ -68,22 +68,22 @@ jobs:
           PATCHER="nerd-fonts-patcher/font-patcher"
 
           for font in "$DIST"/IoskeleyMono-ExtraCondensed*.ttf; do
-            fontforge -script "$PATCHER" "$font" --complete --careful --outputdir patched-fonts/ExtraCondensed
+            fontforge -script "$PATCHER" "$font" --complete --careful --makegroups 4 --outputdir patched-fonts/ExtraCondensed
           done
 
           for font in "$DIST"/IoskeleyMono-SemiCondensed*.ttf; do
-            fontforge -script "$PATCHER" "$font" --complete --careful --outputdir patched-fonts/SemiCondensed
+            fontforge -script "$PATCHER" "$font" --complete --careful --makegroups 4 --outputdir patched-fonts/SemiCondensed
           done
 
           for font in "$DIST"/IoskeleyMono-Condensed*.ttf; do
             [[ "$font" == *ExtraCondensed* ]] && continue
             [[ "$font" == *SemiCondensed* ]] && continue
-            fontforge -script "$PATCHER" "$font" --complete --careful --outputdir patched-fonts/Condensed
+            fontforge -script "$PATCHER" "$font" --complete --careful --makegroups 4 --outputdir patched-fonts/Condensed
           done
 
           for font in "$DIST"/IoskeleyMono-*.ttf; do
             [[ "$font" == *Condensed* ]] && continue
-            fontforge -script "$PATCHER" "$font" --complete --careful --outputdir patched-fonts/Normal
+            fontforge -script "$PATCHER" "$font" --complete --careful --makegroups 4 --outputdir patched-fonts/Normal
           done
 
       - name: Package TTF archives per width
