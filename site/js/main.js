@@ -505,3 +505,31 @@ Prism.plugins.autoloader.loadLanguages(
     updateEditor();
   }
 );
+
+// ── Download counts ──────────────────────────────────────────────────
+
+(async function loadDownloads() {
+  try {
+    const res = await fetch('https://api.github.com/repos/ahatem/IoskeleyMono/releases/latest');
+    if (!res.ok) return;
+    const release = await res.json();
+    const assetMap = {};
+    release.assets.forEach(a => { assetMap[a.name] = a.download_count; });
+
+    const rows = document.querySelectorAll('.dl-cell[data-zip]');
+    let maxCount = 0;
+    const counts = [];
+    rows.forEach(el => {
+      const c = assetMap[el.dataset.zip] || 0;
+      counts.push(c);
+      if (c > maxCount) maxCount = c;
+    });
+    if (maxCount === 0) return;
+
+    rows.forEach((el, i) => {
+      const pct = (counts[i] / maxCount) * 100;
+      el.querySelector('.dl-fill').style.width = pct + '%';
+      el.querySelector('.dl-num').textContent = counts[i].toLocaleString();
+    });
+  } catch (_) {}
+})();
