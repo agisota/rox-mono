@@ -77,45 +77,52 @@ body.switching { opacity: 0.85; }
   padding: 2.5rem 1.5rem 5rem;
 }
 
-/* Width switcher */
-.width-control {
+/* Width switcher — floating */
+.width-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.25rem;
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--bg);
-  padding: 0.5rem 0;
-}
-.width-label {
-  font-size: 0.72rem;
-  color: var(--text-2);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.seg-control {
-  display: flex;
-  gap: 0;
-  border: 1px solid var(--border);
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid var(--accent);
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
-.seg-opt {
+.width-float-label {
   font-family: var(--m);
-  font-size: 0.78rem;
-  background: var(--bg-2);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: #151515;
+  padding: 0.35em 0.85em 0.3em;
+  text-align: center;
+  border-bottom: 1px solid var(--accent);
+}
+.width-float .seg-opt {
+  font-family: var(--m);
+  font-size: 0.72rem;
+  background: #0e0e0e;
   border: none;
   color: var(--text-2);
-  padding: 0.4em 1em;
+  padding: 0.45em 0.85em;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
-  border-right: 1px solid var(--border);
+  text-align: left;
 }
-.seg-opt:last-child { border-right: none; }
-.seg-opt.active { background: #1a160d; color: var(--accent); font-weight: 600; }
-.seg-opt:hover:not(.active) { background: #151515; }
+.width-float .seg-opt + .seg-opt {
+  border-top: 1px solid var(--border);
+}
+.width-float .seg-opt.active {
+  background: #1a160d;
+  color: var(--accent);
+  font-weight: 600;
+}
+.width-float .seg-opt:hover:not(.active) {
+  background: #151515;
+}
 
 /* Header */
 .site-header { margin-bottom: 0; }
@@ -613,4 +620,17 @@ footer p { font-size: 0.82rem; color: var(--text-2); }
   .hero-title { font-size: 2.4rem; }
   .glyph-grid { grid-template-columns: repeat(5, 1fr); }
   .glyph-cell { font-size: 1.1rem; height: 2.6em; }
+  .page { padding-bottom: 7rem; }
+  .width-float {
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+  .width-float .seg-opt {
+    font-size: 0.78rem;
+    padding: 0.5em 0.9em;
+  }
+  .width-float-label {
+    font-size: 0.7rem;
+    padding: 0.4em 0.9em 0.35em;
+  }
 }

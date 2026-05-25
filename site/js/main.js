@@ -76,7 +76,7 @@ const tryLangBtns = document.querySelectorAll('.try-lang-opt');
 const trySamples = document.getElementById('try-samples');
 const tryStatusLang = document.getElementById('try-status-lang');
 let tryLang = 'js';
-const langNames = { js: 'JavaScript', py: 'Python', rust: 'Rust', cpp: 'C++', haskell: 'Haskell', html: 'HTML' };
+const langNames = { js: 'JavaScript', py: 'Python', rust: 'Rust', cpp: 'C++', haskell: 'Haskell', java: 'Java', html: 'HTML' };
 
 const trySamplesData = {
   js: [
@@ -375,6 +375,59 @@ const trySamplesData = {
       ].join('\n'),
     },
   ],
+  java: [
+    {
+      label: 'Records',
+      code: [
+        'public sealed interface Shape',
+        '    permits Circle, Rectangle {}',
+        '',
+        'record Circle(double radius) implements Shape {',
+        '    public double area() {',
+        '        return Math.PI * radius * radius;',
+        '    }',
+        '}',
+        '',
+        'record Rectangle(double w, double h) implements Shape {',
+        '    public double area() {',
+        '        return w * h;',
+        '    }',
+        '}',
+      ].join('\n'),
+    },
+    {
+      label: 'Streams',
+      code: [
+        'var result = IntStream.rangeClosed(1, 20)',
+        '    .filter(n -> n % 2 == 0)',
+        '    .mapToObj(n -> "%d:%d".formatted(n, n * n))',
+        '    .collect(Collectors.joining(", "));',
+        '',
+        'System.out.println(result);',
+      ].join('\n'),
+    },
+    {
+      label: 'Generics',
+      code: [
+        'public class Pair<A, B> {',
+        '    private final A first;',
+        '    private final B second;',
+        '',
+        '    public Pair(A first, B second) {',
+        '        this.first = first;',
+        '        this.second = second;',
+        '    }',
+        '',
+        '    public A first()  { return first; }',
+        '    public B second() { return second; }',
+        '',
+        '    public static <A, B> Pair<A, B> of(A a, B b) {',
+        '        return new Pair<>(a, b);',
+        '    }',
+        '}',
+      ].join('\n'),
+    },
+  ],
 };
 
 function renderSamples() {
@@ -447,7 +500,7 @@ renderSamples();
 tryInput.textContent = trySamplesData.js[0].code;
 tryStatusLang.textContent = 'JavaScript';
 Prism.plugins.autoloader.loadLanguages(
-  ['javascript', 'python', 'rust', 'cpp', 'haskell', 'markup'],
+  ['javascript', 'python', 'rust', 'cpp', 'haskell', 'java', 'markup'],
   () => {
     updateEditor();
   }
