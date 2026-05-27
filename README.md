@@ -8,7 +8,15 @@ The name is a mashup: **Iosevka** + **Berkeley** = **Ioskeley**.
 
 ---
 
-## Preview
+## Live Preview
+
+See Ioskeley Mono in action with real-time editable samples, multiple programming languages, and side-by-side comparison with Berkeley Mono:
+
+**[→ Open Interactive Showcase](https://ahatem.github.io/IoskeleyMono/)**
+
+---
+
+## Static Preview
 
 | Ioskeley Mono | Berkeley Mono |
 | --- | --- |
@@ -19,6 +27,7 @@ The name is a mashup: **Iosevka** + **Berkeley** = **Ioskeley**.
 ![Ioskeley Mono in Action](assets/InAction.png)
 
 > Theme: [Kanagawa Dragon Theme](https://plugins.jetbrains.com/plugin/27101-kanagawa-dragon-theme)
+
 ---
 
 ## Installation
