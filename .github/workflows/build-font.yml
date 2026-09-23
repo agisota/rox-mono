@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout Iosevka source
+      - name: Checkout build tool source
         uses: actions/checkout@v4
         with:
           repository: be5invis/Iosevka
@@ -80,7 +80,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Iosevka encodes the width inside the weight name:
+      # The build tool encodes the width inside the weight name:
       #   Normal        → RoxMonoTypeface-{Weight}.ttf
       #   SemiCondensed → RoxMonoTypeface-SemiCondensed{Weight}.ttf
       - name: Patch fonts with Nerd Font glyphs
