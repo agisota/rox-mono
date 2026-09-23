@@ -52,24 +52,24 @@ jobs:
           cp private-build-plans.toml iosevka-src/
           cd iosevka-src
           npm install
-          npm run build -- contents::IoskeleyMono contents::IoskeleyMonoTerm contents::IoskeleyMonoNL contents::IoskeleyMonoWeb
+          npm run build -- contents::RoxMonoTypefaces contents::RoxMonoTypefacesTerm contents::RoxMonoTypefacesNL contents::RoxMonoTypefacesWeb
 
       - name: Verify build output
         run: |
-          if [ ! -d "iosevka-src/dist/IoskeleyMono/TTF" ] || [ ! -d "iosevka-src/dist/IoskeleyMono/WOFF2" ]; then
-            echo "IoskeleyMono build output not found!"
+          if [ ! -d "iosevka-src/dist/RoxMonoTypefaces/TTF" ] || [ ! -d "iosevka-src/dist/RoxMonoTypefaces/WOFF2" ]; then
+            echo "RoxMonoTypefaces build output not found!"
             exit 1
           fi
-          if [ ! -d "iosevka-src/dist/IoskeleyMonoTerm/TTF" ]; then
-            echo "IoskeleyMonoTerm build output not found!"
+          if [ ! -d "iosevka-src/dist/RoxMonoTypefacesTerm/TTF" ]; then
+            echo "RoxMonoTypefacesTerm build output not found!"
             exit 1
           fi
-          if [ ! -d "iosevka-src/dist/IoskeleyMonoNL/TTF" ]; then
-            echo "IoskeleyMonoNL build output not found!"
+          if [ ! -d "iosevka-src/dist/RoxMonoTypefacesNL/TTF" ]; then
+            echo "RoxMonoTypefacesNL build output not found!"
             exit 1
           fi
-          if [ ! -d "iosevka-src/dist/IoskeleyMonoWeb/WOFF2" ]; then
-            echo "IoskeleyMonoWeb build output not found!"
+          if [ ! -d "iosevka-src/dist/RoxMonoTypefacesWeb/WOFF2" ]; then
+            echo "RoxMonoTypefacesWeb build output not found!"
             exit 1
           fi
 
@@ -81,44 +81,44 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Iosevka encodes the width inside the weight name:
-      #   Normal        → IoskeleyMono-{Weight}.ttf
-      #   SemiCondensed → IoskeleyMono-SemiCondensed{Weight}.ttf
+      #   Normal        → RoxMonoTypefaces-{Weight}.ttf
+      #   SemiCondensed → RoxMonoTypefaces-SemiCondensed{Weight}.ttf
       - name: Patch fonts with Nerd Font glyphs
         run: |
           mkdir -p patched-fonts/Normal patched-fonts/SemiCondensed
           mkdir -p patched-fonts-term/Normal patched-fonts-term/SemiCondensed
           mkdir -p patched-fonts-nl/Normal patched-fonts-nl/SemiCondensed
-          DIST="iosevka-src/dist/IoskeleyMono/TTF"
-          DIST_TERM="iosevka-src/dist/IoskeleyMonoTerm/TTF"
-          DIST_NL="iosevka-src/dist/IoskeleyMonoNL/TTF"
+          DIST="iosevka-src/dist/RoxMonoTypefaces/TTF"
+          DIST_TERM="iosevka-src/dist/RoxMonoTypefacesTerm/TTF"
+          DIST_NL="iosevka-src/dist/RoxMonoTypefacesNL/TTF"
           PATCHER="nerd-fonts-patcher/font-patcher"
 
-          for font in "$DIST"/IoskeleyMono-SemiCondensed*.ttf; do
+          for font in "$DIST"/RoxMonoTypefaces-SemiCondensed*.ttf; do
             fontforge -script "$PATCHER" "$font" --complete --careful --mono --outputdir patched-fonts/SemiCondensed
           done
 
 
-          for font in "$DIST"/IoskeleyMono-*.ttf; do
+          for font in "$DIST"/RoxMonoTypefaces-*.ttf; do
             [[ "$font" == *Condensed* ]] && continue
             fontforge -script "$PATCHER" "$font" --complete --careful --mono --outputdir patched-fonts/Normal
           done
 
-          for font in "$DIST_TERM"/IoskeleyMonoTerm-SemiCondensed*.ttf; do
+          for font in "$DIST_TERM"/RoxMonoTypefacesTerm-SemiCondensed*.ttf; do
             fontforge -script "$PATCHER" "$font" --complete --careful --mono --outputdir patched-fonts-term/SemiCondensed
           done
 
 
-          for font in "$DIST_TERM"/IoskeleyMonoTerm-*.ttf; do
+          for font in "$DIST_TERM"/RoxMonoTypefacesTerm-*.ttf; do
             [[ "$font" == *Condensed* ]] && continue
             fontforge -script "$PATCHER" "$font" --complete --careful --mono --outputdir patched-fonts-term/Normal
           done
 
-          for font in "$DIST_NL"/IoskeleyMonoNL-SemiCondensed*.ttf; do
+          for font in "$DIST_NL"/RoxMonoTypefacesNL-SemiCondensed*.ttf; do
             fontforge -script "$PATCHER" "$font" --complete --careful --mono --outputdir patched-fonts-nl/SemiCondensed
           done
 
 
-          for font in "$DIST_NL"/IoskeleyMonoNL-*.ttf; do
+          for font in "$DIST_NL"/RoxMonoTypefacesNL-*.ttf; do
             [[ "$font" == *Condensed* ]] && continue
             fontforge -script "$PATCHER" "$font" --complete --careful --mono --outputdir patched-fonts-nl/Normal
           done
@@ -143,77 +143,77 @@ jobs:
 
       - name: Package release archives
         run: |
-          DIST="iosevka-src/dist/IoskeleyMono"
-          DIST_TERM="iosevka-src/dist/IoskeleyMonoTerm"
+          DIST="iosevka-src/dist/RoxMonoTypefaces"
+          DIST_TERM="iosevka-src/dist/RoxMonoTypefacesTerm"
 
-          # ── IoskeleyMono.zip — all widths, TTF hinted + unhinted ──────────
+          # ── RoxMonoTypefaces.zip — all widths, TTF hinted + unhinted ──────────
           mkdir -p pkg/Normal/Hinted      pkg/Normal/Unhinted
           mkdir -p pkg/SemiCondensed/Hinted pkg/SemiCondensed/Unhinted
 
-          cp "$DIST"/TTF/IoskeleyMono-SemiCondensed*.ttf          pkg/SemiCondensed/Hinted/
-          cp "$DIST"/TTF-Unhinted/IoskeleyMono-SemiCondensed*.ttf pkg/SemiCondensed/Unhinted/
+          cp "$DIST"/TTF/RoxMonoTypefaces-SemiCondensed*.ttf          pkg/SemiCondensed/Hinted/
+          cp "$DIST"/TTF-Unhinted/RoxMonoTypefaces-SemiCondensed*.ttf pkg/SemiCondensed/Unhinted/
 
-          for f in "$DIST"/TTF/IoskeleyMono-*.ttf;                   do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg/Normal/Hinted/;        done
-          for f in "$DIST"/TTF-Unhinted/IoskeleyMono-*.ttf;          do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg/Normal/Unhinted/;      done
+          for f in "$DIST"/TTF/RoxMonoTypefaces-*.ttf;                   do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg/Normal/Hinted/;        done
+          for f in "$DIST"/TTF-Unhinted/RoxMonoTypefaces-*.ttf;          do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg/Normal/Unhinted/;      done
 
-          cd pkg && zip -r ../IoskeleyMono.zip . && cd ..
+          cd pkg && zip -r ../RoxMonoTypefaces.zip . && cd ..
 
-          # ── IoskeleyMono-NerdFont.zip — all widths, Nerd Font patched ─────
+          # ── RoxMonoTypefaces-NerdFont.zip — all widths, Nerd Font patched ─────
           mkdir -p pkg-nf/Normal pkg-nf/SemiCondensed
           cp patched-fonts/Normal/*.ttf         pkg-nf/Normal/
           cp patched-fonts/SemiCondensed/*.ttf  pkg-nf/SemiCondensed/
-          cd pkg-nf && zip -r ../IoskeleyMono-NerdFont.zip . && cd ..
+          cd pkg-nf && zip -r ../RoxMonoTypefaces-NerdFont.zip . && cd ..
 
-          # ── IoskeleyMono-Term.zip — all widths, term spacing ──────────────
+          # ── RoxMonoTypefaces-Term.zip — all widths, term spacing ──────────────
           mkdir -p pkg-term/Normal/Hinted      pkg-term/Normal/Unhinted
           mkdir -p pkg-term/SemiCondensed/Hinted pkg-term/SemiCondensed/Unhinted
 
-          cp "$DIST_TERM"/TTF/IoskeleyMonoTerm-SemiCondensed*.ttf          pkg-term/SemiCondensed/Hinted/
-          cp "$DIST_TERM"/TTF-Unhinted/IoskeleyMonoTerm-SemiCondensed*.ttf pkg-term/SemiCondensed/Unhinted/
+          cp "$DIST_TERM"/TTF/RoxMonoTypefacesTerm-SemiCondensed*.ttf          pkg-term/SemiCondensed/Hinted/
+          cp "$DIST_TERM"/TTF-Unhinted/RoxMonoTypefacesTerm-SemiCondensed*.ttf pkg-term/SemiCondensed/Unhinted/
 
-          for f in "$DIST_TERM"/TTF/IoskeleyMonoTerm-*.ttf;                   do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-term/Normal/Hinted/;       done
-          for f in "$DIST_TERM"/TTF-Unhinted/IoskeleyMonoTerm-*.ttf;          do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-term/Normal/Unhinted/;     done
+          for f in "$DIST_TERM"/TTF/RoxMonoTypefacesTerm-*.ttf;                   do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-term/Normal/Hinted/;       done
+          for f in "$DIST_TERM"/TTF-Unhinted/RoxMonoTypefacesTerm-*.ttf;          do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-term/Normal/Unhinted/;     done
 
-          cd pkg-term && zip -r ../IoskeleyMono-Term.zip . && cd ..
+          cd pkg-term && zip -r ../RoxMonoTypefaces-Term.zip . && cd ..
 
-          # ── IoskeleyMono-NL.zip — all widths, no ligatures ────────────────
-          DIST_NL="iosevka-src/dist/IoskeleyMonoNL"
+          # ── RoxMonoTypefaces-NL.zip — all widths, no ligatures ────────────────
+          DIST_NL="iosevka-src/dist/RoxMonoTypefacesNL"
           mkdir -p pkg-nl/Normal/Hinted      pkg-nl/Normal/Unhinted
           mkdir -p pkg-nl/SemiCondensed/Hinted pkg-nl/SemiCondensed/Unhinted
 
-          cp "$DIST_NL"/TTF/IoskeleyMonoNL-SemiCondensed*.ttf          pkg-nl/SemiCondensed/Hinted/
-          cp "$DIST_NL"/TTF-Unhinted/IoskeleyMonoNL-SemiCondensed*.ttf pkg-nl/SemiCondensed/Unhinted/
+          cp "$DIST_NL"/TTF/RoxMonoTypefacesNL-SemiCondensed*.ttf          pkg-nl/SemiCondensed/Hinted/
+          cp "$DIST_NL"/TTF-Unhinted/RoxMonoTypefacesNL-SemiCondensed*.ttf pkg-nl/SemiCondensed/Unhinted/
 
-          for f in "$DIST_NL"/TTF/IoskeleyMonoNL-*.ttf;                   do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-nl/Normal/Hinted/;       done
-          for f in "$DIST_NL"/TTF-Unhinted/IoskeleyMonoNL-*.ttf;          do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-nl/Normal/Unhinted/;     done
+          for f in "$DIST_NL"/TTF/RoxMonoTypefacesNL-*.ttf;                   do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-nl/Normal/Hinted/;       done
+          for f in "$DIST_NL"/TTF-Unhinted/RoxMonoTypefacesNL-*.ttf;          do [[ "$f" == *Condensed* ]]     && continue; cp "$f" pkg-nl/Normal/Unhinted/;     done
 
-          cd pkg-nl && zip -r ../IoskeleyMono-NL.zip . && cd ..
+          cd pkg-nl && zip -r ../RoxMonoTypefaces-NL.zip . && cd ..
 
-          # ── IoskeleyMono-Term-NerdFont.zip — term spacing + Nerd Font ─────
+          # ── RoxMonoTypefaces-Term-NerdFont.zip — term spacing + Nerd Font ─────
           mkdir -p pkg-term-nf/Normal pkg-term-nf/SemiCondensed
           cp patched-fonts-term/Normal/*.ttf         pkg-term-nf/Normal/
           cp patched-fonts-term/SemiCondensed/*.ttf  pkg-term-nf/SemiCondensed/
-          cd pkg-term-nf && zip -r ../IoskeleyMono-Term-NerdFont.zip . && cd ..
+          cd pkg-term-nf && zip -r ../RoxMonoTypefaces-Term-NerdFont.zip . && cd ..
 
-          # ── IoskeleyMono-NL-NerdFont.zip — no ligatures + Nerd Font ───────
+          # ── RoxMonoTypefaces-NL-NerdFont.zip — no ligatures + Nerd Font ───────
           mkdir -p pkg-nl-nf/Normal pkg-nl-nf/SemiCondensed
           cp patched-fonts-nl/Normal/*.ttf         pkg-nl-nf/Normal/
           cp patched-fonts-nl/SemiCondensed/*.ttf  pkg-nl-nf/SemiCondensed/
-          cd pkg-nl-nf && zip -r ../IoskeleyMono-NL-NerdFont.zip . && cd ..
+          cd pkg-nl-nf && zip -r ../RoxMonoTypefaces-NL-NerdFont.zip . && cd ..
 
       - name: Package Web archive
         run: |
           # Built from the subsetted plan. Hinting is ignored by browsers, so
           # the unhinted set is not shipped either.
-          cd iosevka-src/dist/IoskeleyMonoWeb
+          cd iosevka-src/dist/RoxMonoTypefacesWeb
 
           # The plan name leaks into the filenames. Strip it so existing
-          # @font-face rules pointing at IoskeleyMono-*.woff2 keep working.
-          for f in WOFF2/IoskeleyMonoWeb-*.woff2; do
-            mv "$f" "${f/IoskeleyMonoWeb-/IoskeleyMono-}"
+          # @font-face rules pointing at RoxMonoTypefaces-*.woff2 keep working.
+          for f in WOFF2/RoxMonoTypefacesWeb-*.woff2; do
+            mv "$f" "${f/RoxMonoTypefacesWeb-/RoxMonoTypefaces-}"
           done
 
-          zip -r ../../../IoskeleyMono-Web.zip WOFF2
+          zip -r ../../../RoxMonoTypefaces-Web.zip WOFF2
 
           echo "web woff2 sizes:"
           ls -lh WOFF2 | head -5
@@ -224,11 +224,11 @@ jobs:
           # Full-coverage web build, packaged from the base plan's WOFF2
           # output. Same filenames as the subset web zip, but with Greek,
           # Cyrillic, long arrows, and rare math glyphs retained. No extra
-          # build plan — this is the plan IoskeleyMono already produces.
+          # build plan — this is the plan RoxMonoTypefaces already produces.
           #
           # The plan name matches, so no renaming is needed here.
-          cd iosevka-src/dist/IoskeleyMono
-          zip -r ../../../IoskeleyMono-Web-Full.zip WOFF2
+          cd iosevka-src/dist/RoxMonoTypefaces
+          zip -r ../../../RoxMonoTypefaces-Web-Full.zip WOFF2
 
           echo "full web woff2 sizes:"
           du -sh WOFF2
@@ -246,10 +246,10 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.vars.outputs.tag }}
-          name: "Ioskeley Mono ${{ steps.vars.outputs.tag }}"
+          name: "Rox Mono Typefaces ${{ steps.vars.outputs.tag }}"
           draft: ${{ github.event_name == 'workflow_dispatch' }}
           body: |
-            ## Ioskeley Mono ${{ steps.vars.outputs.tag }}
+            ## Rox Mono Typefaces ${{ steps.vars.outputs.tag }}
 
             <!-- What's new in this release -->
 
@@ -263,18 +263,18 @@ jobs:
 
             | I want it in | Download |
             |---|---|
-            | An editor — VS Code, JetBrains, Zed | `IoskeleyMono.zip` |
-            | An editor, with Nerd Font icons | `IoskeleyMono-NerdFont.zip` |
-            | A terminal — kitty, Ghostty, WezTerm | `IoskeleyMono-Term.zip` |
-            | A terminal, with Nerd Font icons | `IoskeleyMono-Term-NerdFont.zip` |
-            | An app that can't turn ligatures off | `IoskeleyMono-NL.zip` |
-            | Same, with Nerd Font icons | `IoskeleyMono-NL-NerdFont.zip` |
-            | A website — small subset | `IoskeleyMono-Web.zip` |
-            | A website — full coverage | `IoskeleyMono-Web-Full.zip` |
+            | An editor — VS Code, JetBrains, Zed | `RoxMonoTypefaces.zip` |
+            | An editor, with Nerd Font icons | `RoxMonoTypefaces-NerdFont.zip` |
+            | A terminal — kitty, Ghostty, WezTerm | `RoxMonoTypefaces-Term.zip` |
+            | A terminal, with Nerd Font icons | `RoxMonoTypefaces-Term-NerdFont.zip` |
+            | An app that can't turn ligatures off | `RoxMonoTypefaces-NL.zip` |
+            | Same, with Nerd Font icons | `RoxMonoTypefaces-NL-NerdFont.zip` |
+            | A website — small subset | `RoxMonoTypefaces-Web.zip` |
+            | A website — full coverage | `RoxMonoTypefaces-Web-Full.zip` |
 
-            `IoskeleyMono-Web.zip` is trimmed to Latin, punctuation, arrows,
+            `RoxMonoTypefaces-Web.zip` is trimmed to Latin, punctuation, arrows,
             math operators and box drawing (≈94 KB per face) — the right choice
-            for page loads. `IoskeleyMono-Web-Full.zip` carries the complete
+            for page loads. `RoxMonoTypefaces-Web-Full.zip` carries the complete
             character set (Greek, Cyrillic, long arrows, rare math) at the cost
             of size, for sites that need those glyphs.
 
@@ -282,17 +282,17 @@ jobs:
             standard displays, Unhinted for Retina and HiDPI.
 
             Nerd Font builds are now patched single-width, so they install as
-            `Ioskeley Mono Nerd Font Mono`.
+            `Rox Mono Typefaces Nerd Font Mono`.
 
-            Not sure which to pick? [See the README](https://github.com/ahatem/IoskeleyMono#downloads--variants).
+            Not sure which to pick? [See the README](https://github.com/agisota/rox-mono#downloads--variants).
           files: |
-            IoskeleyMono.zip
-            IoskeleyMono-NerdFont.zip
-            IoskeleyMono-Term.zip
-            IoskeleyMono-Term-NerdFont.zip
-            IoskeleyMono-NL.zip
-            IoskeleyMono-NL-NerdFont.zip
-            IoskeleyMono-Web.zip
-            IoskeleyMono-Web-Full.zip
+            RoxMonoTypefaces.zip
+            RoxMonoTypefaces-NerdFont.zip
+            RoxMonoTypefaces-Term.zip
+            RoxMonoTypefaces-Term-NerdFont.zip
+            RoxMonoTypefaces-NL.zip
+            RoxMonoTypefaces-NL-NerdFont.zip
+            RoxMonoTypefaces-Web.zip
+            RoxMonoTypefaces-Web-Full.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

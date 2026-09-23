@@ -151,7 +151,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 // ── Width switcher ────────────────────────────────────────────────────
 
 const widthOpts = document.querySelectorAll('#width-switcher .seg-opt');
-const WIDTH_KEY = 'ioskeley-width';
+const WIDTH_KEY = 'roxmono-width';
 
 (function initWidth() {
   const saved = localStorage.getItem(WIDTH_KEY);
@@ -352,7 +352,7 @@ const trySamplesData = {
         '        <time datetime="2026-05-26">May 26</time>',
         '    </header>',
         '    <section class="content">',
-        '        <p>Styled with <strong>Ioskeley Mono</strong>.</p>',
+        '        <p>Styled with <strong>Rox Mono Typefaces</strong>.</p>',
         '        <pre><code>npm run build</code></pre>',
         '    </section>',
         '</article>',
@@ -705,7 +705,7 @@ if (ligaturesBtn) {
 const configSnippets = {
   vscode: `// VS Code / Cursor: settings.json
 {
-  "editor.fontFamily": "'Ioskeley Mono', monospace",
+  "editor.fontFamily": "'Rox Mono Typefaces', monospace",
   "editor.fontLigatures": true,
   "editor.fontWeight": "400",
   "editor.fontSize": 14.5,
@@ -713,31 +713,31 @@ const configSnippets = {
 }`,
   zed: `// Zed: settings.json
 {
-  "buffer_font_family": "Ioskeley Mono",
+  "buffer_font_family": "Rox Mono Typefaces",
   "buffer_font_size": 15,
   "buffer_line_height": "comfortable"
 }`,
   ghostty: `# Ghostty: config
-font-family = Ioskeley Mono
+font-family = Rox Mono Typefaces
 font-size = 14`,
   kitty: `# Kitty: kitty.conf
-font_family      Ioskeley Mono Term
+font_family      Rox Mono Typefaces Term
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 font_size        14.0`,
   alacritty: `# Alacritty: alacritty.toml
 [font.normal]
-family = "Ioskeley Mono"
+family = "Rox Mono Typefaces"
 style = "Regular"`,
   wezterm: `-- WezTerm: wezterm.lua
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
-config.font = wezterm.font('Ioskeley Mono')
+config.font = wezterm.font('Rox Mono Typefaces')
 config.font_size = 14.0
 return config`,
   neovim: `-- Neovim GUI (Neovide / Goneovim)
-vim.opt.guifont = "IoskeleyMono Nerd Font:h14"`
+vim.opt.guifont = "RoxMonoTypefaces Nerd Font:h14"`
 };
 
 (function initConfigTabs() {
@@ -786,7 +786,7 @@ vim.opt.guifont = "IoskeleyMono Nerd Font:h14"`
 
 (async function loadDownloads() {
   try {
-    const res = await fetch('https://api.github.com/repos/ahatem/IoskeleyMono/releases/latest');
+    const res = await fetch('https://api.github.com/repos/agisota/rox-mono/releases/latest');
     if (!res.ok) return;
     const release = await res.json();
     const assetMap = {};
@@ -1041,7 +1041,7 @@ vim.opt.guifont = "IoskeleyMono Nerd Font:h14"`
   function applyWidthClass(w) {
     document.documentElement.classList.remove('sc');
     if (w === 'sc') document.documentElement.classList.add('sc');
-    localStorage.setItem('ioskeley-width', w);
+    localStorage.setItem('roxmono-width', w);
   }
 
   function syncAll(w) {
@@ -1061,7 +1061,7 @@ vim.opt.guifont = "IoskeleyMono Nerd Font:h14"`
   }
 
   // Restore saved width
-  const saved = localStorage.getItem('ioskeley-width');
+  const saved = localStorage.getItem('roxmono-width');
   if (saved) syncAll(saved);
 })();
 
@@ -1100,7 +1100,7 @@ vim.opt.guifont = "IoskeleyMono Nerd Font:h14"`
     const light = root.getAttribute('data-theme') === 'light';
     if (light) root.removeAttribute('data-theme');
     else root.setAttribute('data-theme', 'light');
-    try { localStorage.setItem('ioskeley-theme', light ? 'dark' : 'light'); } catch (_) {}
+    try { localStorage.setItem('roxmono-theme', light ? 'dark' : 'light'); } catch (_) {}
     syncArtwork();
   });
 
@@ -1109,7 +1109,7 @@ vim.opt.guifont = "IoskeleyMono Nerd Font:h14"`
   if (mq && mq.addEventListener) {
     mq.addEventListener('change', e => {
       let saved = null;
-      try { saved = localStorage.getItem('ioskeley-theme'); } catch (_) {}
+      try { saved = localStorage.getItem('roxmono-theme'); } catch (_) {}
       if (saved) return;
       if (e.matches) root.setAttribute('data-theme', 'light');
       else root.removeAttribute('data-theme');

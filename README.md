@@ -1,14 +1,14 @@
-# Ioskeley Mono
+# Rox Mono Typefaces
 
 <p align="center">
-  <img src="assets/SocialPreview.png" alt="Ioskeley Mono — открытая программная гарнитура" width="100%">
+  <img src="assets/SocialPreview.png" alt="Rox Mono Typefaces — открытая программная гарнитура" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/ahatem/IoskeleyMono/releases/latest"><img src="https://img.shields.io/github/v/release/ahatem/IoskeleyMono?style=flat-square&color=b8943a" alt="Последний выпуск"></a>
-  <a href="https://github.com/ahatem/IoskeleyMono/releases"><img src="https://img.shields.io/github/downloads/ahatem/IoskeleyMono/total?style=flat-square&color=333" alt="Всего загрузок"></a>
+  <a href="https://github.com/agisota/rox-mono/releases/latest"><img src="https://img.shields.io/github/v/release/agisota/rox-mono?style=flat-square&color=b8943a" alt="Последний выпуск"></a>
+  <a href="https://github.com/agisota/rox-mono/releases"><img src="https://img.shields.io/github/downloads/agisota/rox-mono/total?style=flat-square&color=333" alt="Всего загрузок"></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-SIL%20OFL%201.1-b8943a?style=flat-square" alt="SIL Open Font License 1.1"></a>
-  <a href="https://ahatem.github.io/IoskeleyMono/"><img src="https://img.shields.io/badge/showcase-live-b8943a?style=flat-square" alt="Онлайн-демонстрация"></a>
+  <a href="https://agisota.github.io/rox-mono/"><img src="https://img.shields.io/badge/showcase-live-b8943a?style=flat-square" alt="Онлайн-демонстрация"></a>
 </p>
 
 <p align="center">
@@ -17,13 +17,13 @@
 </p>
 
 <p align="center">
-  <a href="https://ahatem.github.io/IoskeleyMono/"><strong>Открыть онлайн-демонстрацию</strong></a>
+  <a href="https://agisota.github.io/rox-mono/"><strong>Открыть онлайн-демонстрацию</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/ahatem/IoskeleyMono/releases/latest"><strong>Скачать последнюю версию</strong></a>
+  <a href="https://github.com/agisota/rox-mono/releases/latest"><strong>Скачать последнюю версию</strong></a>
 </p>
 
 <p align="center">
-  <sub>Ioskeley Mono бесплатен. Звёзды репозиторию, ваши примеры настроек, отчёты об ошибках и вклад в развитие — всё это помогает проекту расти.</sub>
+  <sub>Rox Mono Typefaces бесплатен. Звёзды репозиторию, ваши примеры настроек, отчёты об ошибках и вклад в развитие — всё это помогает проекту расти.</sub>
 </p>
 
 <p align="center">
@@ -38,23 +38,23 @@
 
 ## Загрузки и варианты
 
-Не знаете, какой файл выбрать? Начните с **[`IoskeleyMono.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono.zip)** для редактора или **[`IoskeleyMono-Term.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-Term.zip)** для терминала.
+Не знаете, какой файл выбрать? Начните с **[`RoxMonoTypefaces.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces.zip)** для редактора или **[`RoxMonoTypefaces-Term.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Term.zip)** для терминала.
 
 | Пакет | Лучше всего подходит | Лигатуры | Иконки Nerd Font |
 |---|---|:---:|:---:|
-| **[`IoskeleyMono.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono.zip)** | VS Code, JetBrains IDEs, Zed, Sublime Text, Cursor | Да | Нет |
-| **[`IoskeleyMono-NerdFont.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-NerdFont.zip)** | Редакторы, которым нужны патченые символы и иконки | Да | Да |
-| **[`IoskeleyMono-Term.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-Term.zip)** | Kitty, Ghostty, WezTerm, Alacritty | Да | Нет |
-| **[`IoskeleyMono-Term-NerdFont.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-Term-NerdFont.zip)** | Терминалы, промпты и консольные редакторы, которым нужны иконки | Да | Да |
-| **[`IoskeleyMono-NL.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-NL.zip)** | Приложения, в которых нельзя отключить лигатуры, включая Xcode | Нет | Нет |
-| **[`IoskeleyMono-NL-NerdFont.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-NL-NerdFont.zip)** | Семейство без лигатур с патчеными символами и иконками | Нет | Да |
-| **[`IoskeleyMono-Web.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-Web.zip)** | Сайты с латинским текстом, пунктуацией, стрелками, математикой или блочной графикой | Да | Нет |
-| **[`IoskeleyMono-Web-Full.zip`](https://github.com/ahatem/IoskeleyMono/releases/latest/download/IoskeleyMono-Web-Full.zip)** | Сайты, которым нужен полный набор глифов десктопной версии | Да | Нет |
+| **[`RoxMonoTypefaces.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces.zip)** | VS Code, JetBrains IDEs, Zed, Sublime Text, Cursor | Да | Нет |
+| **[`RoxMonoTypefaces-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-NerdFont.zip)** | Редакторы, которым нужны патченые символы и иконки | Да | Да |
+| **[`RoxMonoTypefaces-Term.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Term.zip)** | Kitty, Ghostty, WezTerm, Alacritty | Да | Нет |
+| **[`RoxMonoTypefaces-Term-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Term-NerdFont.zip)** | Терминалы, промпты и консольные редакторы, которым нужны иконки | Да | Да |
+| **[`RoxMonoTypefaces-NL.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-NL.zip)** | Приложения, в которых нельзя отключить лигатуры, включая Xcode | Нет | Нет |
+| **[`RoxMonoTypefaces-NL-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-NL-NerdFont.zip)** | Семейство без лигатур с патчеными символами и иконками | Нет | Да |
+| **[`RoxMonoTypefaces-Web.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Web.zip)** | Сайты с латинским текстом, пунктуацией, стрелками, математикой или блочной графикой | Да | Нет |
+| **[`RoxMonoTypefaces-Web-Full.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Web-Full.zip)** | Сайты, которым нужен полный набор глифов десктопной версии | Да | Нет |
 
 > [!TIP]
 > **Работаете в терминале?** Выберите пакет `Term`. Его метрики сохраняют стрелки и символы блочной графики внутри своих ячеек.
 >
-> **Делаете сайт?** Начните с `IoskeleyMono-Web.zip`. Выбирайте `Web-Full` только если нужны греческий алфавит, кириллица, длинные стрелки или редкие математические символы. Оба веб-архива используют одинаковые имена файлов, поэтому для переключения между ними не нужны новые правила `@font-face`.
+> **Делаете сайт?** Начните с `RoxMonoTypefaces-Web.zip`. Выбирайте `Web-Full` только если нужны греческий алфавит, кириллица, длинные стрелки или редкие математические символы. Оба веб-архива используют одинаковые имена файлов, поэтому для переключения между ними не нужны новые правила `@font-face`.
 
 ### Выберите ширину
 
@@ -96,7 +96,7 @@ SemiCondensed/
 
 ## Дизайн
 
-Ioskeley Mono — не готовая сборка Iosevka. Его [план сборки](./private-build-plans.toml) определяет формы глифов, ширины, наклоны, межсимвольные интервалы и вертикальные метрики, используемые во всём семействе.
+Rox Mono Typefaces — не готовая сборка Iosevka. Его [план сборки](./private-build-plans.toml) определяет формы глифов, ширины, наклоны, межсимвольные интервалы и вертикальные метрики, используемые во всём семействе.
 
 В дизайне уравновешены три идеи:
 
@@ -106,25 +106,25 @@ Ioskeley Mono — не готовая сборка Iosevka. Его [план с�
 
 ### Сравнение деталей
 
-Ниже показано, как глифы Ioskeley Mono соотносятся с глифами Berkeley Mono и чем две гарнитуры различаются.
+Ниже показано, как глифы Rox Mono Typefaces соотносятся с глифами Berkeley Mono и чем две гарнитуры различаются.
 
 #### Формы знаков
 
 Сравнение цифр, пунктуации, скобок и распространённых программных знаков.
 
-![Сравнение форм знаков Ioskeley Mono и Berkeley Mono](assets/01-Ioskeley-vs-Berkeley-Character-Forms.png)
+![Сравнение форм знаков Rox Mono Typefaces и Berkeley Mono](assets/01-RoxMonoTypefaces-vs-Berkeley-Character-Forms.png)
 
 #### Наложение
 
 Наложение глифов друг на друга для проверки базовых линий, пропорций, общих областей и заметных различий контуров.
 
-![Исследование наложения пикселей Ioskeley Mono и Berkeley Mono](assets/02-Ioskeley-vs-Berkeley-Pixel-Overlay.png)
+![Исследование наложения пикселей Rox Mono Typefaces и Berkeley Mono](assets/02-RoxMonoTypefaces-vs-Berkeley-Pixel-Overlay.png)
 
 #### Плотность кода
 
 Образец реального кода, сравнивающий ритм строк, интервалы и визуальный вес в редакторе.
 
-![Сравнение на реальном коде Ioskeley Mono и Berkeley Mono](assets/03-Ioskeley-vs-Berkeley-Real-Code.png)
+![Сравнение на реальном коде Rox Mono Typefaces и Berkeley Mono](assets/03-RoxMonoTypefaces-vs-Berkeley-Real-Code.png)
 
 ## Толщины
 
@@ -149,13 +149,13 @@ Ioskeley Mono — не готовая сборка Iosevka. Его [план с�
 
 | Система | Пакет | Установка |
 |---|---|---|
-| macOS | [Homebrew](https://formulae.brew.sh/cask/font-ioskeley-mono) | `brew install --cask font-ioskeley-mono` |
-| Nix / NixOS | [nixpkgs](https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/ioskeley-mono) | `nix profile install nixpkgs#ioskeley-mono.normal` |
-| Arch Linux | [AUR](https://aur.archlinux.org/packages/ttf-ioskeley-mono) | Пакет: `ttf-ioskeley-mono` |
-| Slackware | [SlackBuilds.org](https://slackbuilds.org/repository/15.0/system/IoskeleyMono/) | Пакет: `IoskeleyMono` |
+| macOS | [Homebrew](https://formulae.brew.sh/cask/font-roxmono-mono) | `brew install --cask font-roxmono-mono` |
+| Nix / NixOS | [nixpkgs](https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/roxmono-mono) | `nix profile install nixpkgs#roxmono-mono.normal` |
+| Arch Linux | [AUR](https://aur.archlinux.org/packages/ttf-roxmono-mono) | Пакет: `ttf-roxmono-mono` |
+| Slackware | [SlackBuilds.org](https://slackbuilds.org/repository/15.0/system/RoxMonoTypefaces/) | Пакет: `RoxMonoTypefaces` |
 
 > [!NOTE]
-> Репозитории пакетов обновляются по собственному расписанию и не всегда содержат последний выпуск Ioskeley. Страница [GitHub Releases](https://github.com/ahatem/IoskeleyMono/releases/latest) — источник актуальных сборок и всех доступных вариантов.
+> Репозитории пакетов обновляются по собственному расписанию и не всегда содержат последний выпуск Rox Mono Typefaces. Страница [GitHub Releases](https://github.com/agisota/rox-mono/releases/latest) — источник актуальных сборок и всех доступных вариантов.
 
 Спасибо [@zhimoe](https://github.com/zhimoe), [@ForsakenHarmony](https://github.com/ForsakenHarmony) и [@frovere](https://github.com/frovere) за помощь с публикацией в Homebrew.
 
@@ -163,7 +163,7 @@ Ioskeley Mono — не готовая сборка Iosevka. Его [план с�
 
 - **macOS:** Распакуйте архив, выберите файлы `.ttf` из папки нужной ширины и варианта рендеринга, откройте их в приложении Font Book и нажмите **Установить**.
 - **Windows:** Распакуйте архив, выберите файлы `.ttf`, щёлкните по ним правой кнопкой и выберите **Install for all users** («Установить для всех пользователей»).
-- **Linux:** Скопируйте выбранные файлы `.ttf` в `~/.local/share/fonts/IoskeleyMono/`, затем выполните `fc-cache -fv`.
+- **Linux:** Скопируйте выбранные файлы `.ttf` в `~/.local/share/fonts/RoxMonoTypefaces/`, затем выполните `fc-cache -fv`.
 
 После установки перезапустите открытые приложения, чтобы они обновили списки шрифтов.
 
@@ -173,18 +173,18 @@ Ioskeley Mono — не готовая сборка Iosevka. Его [план с�
 
 | Пакет | Гарнитура |
 |---|---|
-| Standard | `Ioskeley Mono` |
-| Standard Nerd Font | `IoskeleyMono Nerd Font Mono` |
-| Term | `Ioskeley Mono Term` |
-| Term Nerd Font | `IoskeleyMonoTerm Nerd Font Mono` |
-| No Ligatures | `Ioskeley Mono NL` |
-| No Ligatures Nerd Font | `IoskeleyMonoNL Nerd Font Mono` |
+| Standard | `Rox Mono Typefaces` |
+| Standard Nerd Font | `RoxMonoTypefaces Nerd Font Mono` |
+| Term | `Rox Mono Typefaces Term` |
+| Term Nerd Font | `RoxMonoTypefacesTerm Nerd Font Mono` |
+| No Ligatures | `Rox Mono Typefaces NL` |
+| No Ligatures Nerd Font | `RoxMonoTypefacesNL Nerd Font Mono` |
 
 ### VS Code / Cursor
 
 ```json
 {
-  "editor.fontFamily": "'Ioskeley Mono', monospace",
+  "editor.fontFamily": "'Rox Mono Typefaces', monospace",
   "editor.fontLigatures": true,
   "editor.fontWeight": "400",
   "editor.fontSize": 14.5,
@@ -196,7 +196,7 @@ Ioskeley Mono — не готовая сборка Iosevka. Его [план с�
 
 ```json
 {
-  "buffer_font_family": "Ioskeley Mono",
+  "buffer_font_family": "Rox Mono Typefaces",
   "buffer_font_size": 15,
   "buffer_line_height": "comfortable"
 }
@@ -205,7 +205,7 @@ Ioskeley Mono — не готовая сборка Iosevka. Его [план с�
 ### Ghostty
 
 ```ini
-font-family = Ioskeley Mono Term
+font-family = Rox Mono Typefaces Term
 font-size = 14
 ```
 
@@ -213,14 +213,14 @@ font-size = 14
 
 ```toml
 [font.normal]
-family = "Ioskeley Mono Term"
+family = "Rox Mono Typefaces Term"
 style = "Regular"
 ```
 
 ### Kitty
 
 ```conf
-font_family      Ioskeley Mono Term
+font_family      Rox Mono Typefaces Term
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -229,7 +229,7 @@ font_size        14.0
 
 ## Возможности OpenType
 
-Ioskeley Mono поддерживает функции OpenType, которые совместимые приложения могут включать и отключать.
+Rox Mono Typefaces поддерживает функции OpenType, которые совместимые приложения могут включать и отключать.
 
 | Функция | Действие |
 |---|---|
@@ -251,7 +251,7 @@ font-feature = zero
 
 ```conf
 # Kitty
-font_features IoskeleyMonoTerm +zero
+font_features RoxMonoTypefacesTerm +zero
 ```
 
 ```css
@@ -265,16 +265,16 @@ font-feature-settings: "zero";
 
 ```bash
 # Clone the project and the pinned Iosevka source
-git clone https://github.com/ahatem/IoskeleyMono.git
+git clone https://github.com/agisota/rox-mono.git
 git clone --branch v34.4.0 --depth 1 https://github.com/be5invis/Iosevka.git
 
 # Copy the custom build plan
-cp IoskeleyMono/private-build-plans.toml Iosevka/
+cp RoxMonoTypefaces/private-build-plans.toml Iosevka/
 
 # Install dependencies and build every family
 cd Iosevka
 npm install
-npm run build -- contents::IoskeleyMono contents::IoskeleyMonoTerm contents::IoskeleyMonoNL contents::IoskeleyMonoWeb
+npm run build -- contents::RoxMonoTypefaces contents::RoxMonoTypefacesTerm contents::RoxMonoTypefacesNL contents::RoxMonoTypefacesWeb
 ```
 
 Скомпилированные файлы записываются в `Iosevka/dist/<PlanName>/`. Релизный workflow также создаёт варианты с хинтингом, Nerd Font и упакованные архивы для скачивания.
