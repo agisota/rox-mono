@@ -193,7 +193,7 @@ const langNames = { js: 'JavaScript', py: 'Python', rust: 'Rust', cpp: 'C++', ha
 const trySamplesData = {
   js: [
     {
-      label: 'Fibonacci',
+      label: 'Фибоначчи',
       code: [
         'const fibonacci = (n) => {',
         '    if (n < 2) return n;',
@@ -205,7 +205,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Filter',
+      label: 'Фильтр',
       code: [
         'const users = [',
         '    { name: "Alice", role: "admin" },',
@@ -221,7 +221,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Async',
+      label: 'Асинхронность',
       code: [
         'async function fetchData(url) {',
         '    try {',
@@ -238,7 +238,7 @@ const trySamplesData = {
   ],
   py: [
     {
-      label: 'Data',
+      label: 'Данные',
       code: [
         'from dataclasses import dataclass',
         '',
@@ -257,7 +257,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Comprehension',
+      label: 'Включения',
       code: [
         'nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]',
         '',
@@ -271,7 +271,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Decorator',
+      label: 'Декоратор',
       code: [
         'import time',
         '',
@@ -293,7 +293,7 @@ const trySamplesData = {
   ],
   rust: [
     {
-      label: 'Enum',
+      label: 'Перечисление',
       code: [
         '#[derive(Debug)]',
         'enum Status {',
@@ -312,7 +312,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Generics',
+      label: 'Обобщения',
       code: [
         'fn identity<T: std::fmt::Display>(x: T) -> String {',
         '    format!("value: {}", x)',
@@ -327,7 +327,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Iterator',
+      label: 'Итератор',
       code: [
         'fn process(nums: &[i32]) -> Vec<i32> {',
         '    nums.iter()',
@@ -344,7 +344,7 @@ const trySamplesData = {
   ],
   html: [
     {
-      label: 'Article',
+      label: 'Статья',
       code: [
         '<article class="post">',
         '    <header>',
@@ -359,7 +359,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Form',
+      label: 'Форма',
       code: [
         '<form action="/submit" method="POST">',
         '    <label for="email">Email:</label>',
@@ -376,7 +376,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Table',
+      label: 'Таблица',
       code: [
         '<table>',
         '    <caption>Font Weights</caption>',
@@ -394,7 +394,7 @@ const trySamplesData = {
   ],
   cpp: [
     {
-      label: 'Template',
+      label: 'Шаблоны',
       code: [
         'template <typename T>',
         'concept Numeric = std::is_arithmetic_v<T>;',
@@ -409,7 +409,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Lambda',
+      label: 'Лямбда',
       code: [
         '#include <vector>',
         '#include <algorithm>',
@@ -445,7 +445,7 @@ const trySamplesData = {
   ],
   haskell: [
     {
-      label: 'Quicksort',
+      label: 'Быстрая сортировка',
       code: [
         'quicksort :: Ord a => [a] -> [a]',
         'quicksort [] = []',
@@ -457,7 +457,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Functor',
+      label: 'Функтор',
       code: [
         'data Maybe\' a = Nothing\' | Just\' a',
         '    deriving (Show, Eq)',
@@ -468,7 +468,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Eval',
+      label: 'Вычисление',
       code: [
         'data Expr = Val Int',
         '          | Add Expr Expr',
@@ -489,7 +489,7 @@ const trySamplesData = {
   ],
   java: [
     {
-      label: 'Records',
+      label: 'Рекорды',
       code: [
         'public sealed interface Shape',
         '    permits Circle, Rectangle {}',
@@ -508,7 +508,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Streams',
+      label: 'Стримы',
       code: [
         'var result = IntStream.rangeClosed(1, 20)',
         '    .filter(n -> n % 2 == 0)',
@@ -519,7 +519,7 @@ const trySamplesData = {
       ].join('\n'),
     },
     {
-      label: 'Generics',
+      label: 'Обобщения',
       code: [
         'public class Pair<A, B> {',
         '    private final A first;',
@@ -717,7 +717,7 @@ const configSnippets = {
   "buffer_font_size": 15,
   "buffer_line_height": "comfortable"
 }`,
-  ghostty: `# Ghostty: config
+  ghostty: `# Ghostty: конфиг
 font-family = Rox Mono Typefaces
 font-size = 14`,
   kitty: `# Kitty: kitty.conf
@@ -770,10 +770,10 @@ vim.opt.guifont = "RoxMonoTypefaces Nerd Font:h14"`
       try {
         await navigator.clipboard.writeText(configSnippets[currentKey]);
         copyBtn.classList.add('copied');
-        if (copyText) copyText.textContent = '✓ Copied';
+        if (copyText) copyText.textContent = '✓ Скопировано';
         setTimeout(() => {
           copyBtn.classList.remove('copied');
-          if (copyText) copyText.textContent = 'Copy';
+          if (copyText) copyText.textContent = 'Копировать';
         }, 2000);
       } catch (_) {}
     });
@@ -891,7 +891,7 @@ vim.opt.guifont = "RoxMonoTypefaces Nerd Font:h14"`
     return {
       img,
       alt: img ? img.getAttribute('alt') : '',
-      title: card.dataset.title || (img ? img.getAttribute('alt') : 'Comparison Specimen'),
+      title: card.dataset.title || (img ? img.getAttribute('alt') : 'Образец сравнения'),
     };
   });
 
@@ -914,10 +914,10 @@ vim.opt.guifont = "RoxMonoTypefaces Nerd Font:h14"`
     isZoomed = zoomed;
     if (isZoomed) {
       viewport.classList.add('is-zoomed');
-      if (zoomLabel) zoomLabel.textContent = 'Fit Screen';
+      if (zoomLabel) zoomLabel.textContent = 'По размеру экрана';
     } else {
       viewport.classList.remove('is-zoomed');
-      if (zoomLabel) zoomLabel.textContent = '1:1 Zoom';
+      if (zoomLabel) zoomLabel.textContent = 'Масштаб 1:1';
       viewport.scrollTop = 0;
       viewport.scrollLeft = 0;
     }
