@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="D2xLgKAChfKbVjQlxidI2jr5HuREg-neBkuTSkYcwvA" />
-  <meta name="description" content="Rox Mono Typefaces — бесплатная моноширинная гарнитура с открытым кодом, альтернатива Berkeley Mono на основе Iosevka.">
+  <meta name="description" content="Rox Mono Typefaces — бесплатная моноширинная гарнитура с открытым кодом, созданная специально для Rox.">
   <meta name="author" content="agisota">
   <title>Rox Mono Typefaces — бесплатная моноширинная гарнитура с открытым кодом</title>
   <meta property="og:title" content="Rox Mono Typefaces — бесплатная моноширинная гарнитура с открытым кодом">
-  <meta property="og:description" content="Бесплатная моноширинная гарнитура с открытым кодом, альтернатива Berkeley Mono на основе Iosevka.">
+  <meta property="og:description" content="Бесплатная моноширинная гарнитура с открытым кодом, созданная специально для Rox.">
   <meta property="og:url" content="https://font.rox.one/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="imgs/SocialPreview.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Rox Mono Typefaces — бесплатная моноширинная гарнитура с открытым кодом">
-  <meta name="twitter:description" content="Бесплатная альтернатива Berkeley Mono с открытым кодом на основе Iosevka.">
+  <meta name="twitter:description" content="Бесплатная моноширинная гарнитура с открытым кодом для Rox.">
   <meta name="twitter:image" content="imgs/SocialPreview.png">
   <link rel="canonical" href="https://font.rox.one/">
   <link rel="shortcut icon" href="imgs/SocialPreview.png" type="image/png">
@@ -558,31 +558,23 @@ SemiCondensed/
     <div class="build-header">
       <span>Требования: Node.js 18+, npm, Git</span>
     </div>
-    <pre class="build-code"><code><span class="tok-comment"># 1. Клонируем репозиторий и апстрим Iosevka</span>
+    <pre class="build-code"><code><span class="tok-comment"># 1. Клонируем репозиторий</span>
 git clone https://github.com/agisota/rox-mono.git
-git clone --depth 1 https://github.com/be5invis/Iosevka.git
 
 <span class="tok-comment"># 2. Копируем кастомный план сборки</span>
-cp RoxMonoTypefaces/private-build-plans.toml Iosevka/
+cp RoxMonoTypefaces/private-build-plans.toml RoxMonoTypeface/
 
 <span class="tok-comment"># 3. Устанавливаем инструменты сборки и компилируем шрифты</span>
-cd Iosevka
+cd RoxMonoTypeface
 npm install
 npm run build -- contents::RoxMonoTypefaces contents::RoxMonoTypefacesTerm</code></pre>
     <div class="build-footer">
-      <span>Результат сборки: <code>Iosevka/dist/RoxMonoTypefaces/</code> и <code>Iosevka/dist/RoxMonoTypefacesTerm/</code></span>
+      <span>Результат сборки: <code>RoxMonoTypeface/dist/RoxMonoTypefaces/</code> и <code>RoxMonoTypeface/dist/RoxMonoTypefacesTerm/</code></span>
     </div>
   </div>
 
   <hr>
 
-  <footer>
-    <p>
-      Rox Mono Typefaces — кастомная конфигурация <a href="https://github.com/be5invis/Iosevka" target="_blank" rel="noopener">Iosevka</a>
-      от <a href="https://github.com/be5invis" target="_blank" rel="noopener">Belleve Invis</a>.
-      Распространяется по лицензии <a href="LICENSE" target="_blank" rel="noopener">SIL Open Font License 1.1</a>.
-    </p>
-  </footer>
 
 </div>
 

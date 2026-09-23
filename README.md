@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <strong>Компактная геометрическая программная гарнитура, созданная на основе Iosevka.</strong><br>
+  <strong>Компактная геометрическая программная гарнитура.</strong><br>
   Настроена для редакторов, терминалов и веба. Вдохновлена характером Berkeley Mono.
 </p>
 
@@ -96,7 +96,7 @@ SemiCondensed/
 
 ## Дизайн
 
-Rox Mono Typefaces — не готовая сборка Iosevka. Его [план сборки](./private-build-plans.toml) определяет формы глифов, ширины, наклоны, межсимвольные интервалы и вертикальные метрики, используемые во всём семействе.
+Rox Mono Typefaces — не стоковая сборка. Её [план сборки](./private-build-plans.toml) определяет формы глифов, ширины, наклоны, межсимвольные интервалы и вертикальные метрики, используемые во всём семействе.
 
 В дизайне уравновешены три идеи:
 
@@ -261,20 +261,19 @@ font-feature-settings: "zero";
 
 ## Сборка из исходников
 
-Релизные сборки создаются с помощью [GitHub Actions](.github/workflows/build-font.yml). Текущий workflow закрепляет Iosevka `v34.4.0`, поэтому тегированные выпуски остаются воспроизводимыми.
+Релизные сборки создаются с помощью [GitHub Actions](.github/workflows/build-font.yml). Workflow закрепляет версию сборочной системы `v34.4.0`, поэтому тегированные выпуски остаются воспроизводимыми.
 
 ```bash
-# Clone the project and the pinned Iosevka source
+# Clone the project
 git clone https://github.com/agisota/rox-mono.git
-git clone --branch v34.4.0 --depth 1 https://github.com/be5invis/Iosevka.git
 
 # Copy the custom build plan
-cp RoxMonoTypefaces/private-build-plans.toml Iosevka/
+cp RoxMonoTypefaces/private-build-plans.toml RoxMonoTypeface/
 
 # Install dependencies and build every family
-cd Iosevka
+cd RoxMonoTypeface
 npm install
 npm run build -- contents::RoxMonoTypefaces contents::RoxMonoTypefacesTerm contents::RoxMonoTypefacesNL contents::RoxMonoTypefacesWeb
 ```
 
-Скомпилированные файлы записываются в `Iosevka/dist/<PlanName>/`. Релизный workflow также создаёт варианты с хинтингом, Nerd Font и упакованные архивы для скачивания.
+Скомпилированные файлы записываются в `RoxMonoTypeface/dist/<PlanName>/`. Релизный workflow также создаёт варианты с хинтингом, Nerd Font и упакованные архивы для скачивания.
