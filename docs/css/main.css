@@ -42,7 +42,7 @@
   --overlay-strong: rgba(18, 15, 10, 0.95);
   --backdrop: rgba(4, 4, 4, 0.94);
 
-  --m: "Rox Mono Typefaces", "IBM Plex Mono", "Cascadia Code", "JetBrains Mono", monospace;
+  --m: "Rox Mono Typeface", "IBM Plex Mono", "Cascadia Code", "JetBrains Mono", monospace;
 }
 
 /* Kintsugi Light Flared. Ramps invert: each step stays one shade further
@@ -89,51 +89,51 @@
 }
 
 /* Width font families — only Normal loaded by default */
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-Thin.woff2") format("woff2"); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-ThinItalic.woff2") format("woff2"); font-weight: 100; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-ExtraLight.woff2") format("woff2"); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-ExtraLightItalic.woff2") format("woff2"); font-weight: 200; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-LightItalic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-SemiLight.woff2") format("woff2"); font-weight: 350; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-SemiLightItalic.woff2") format("woff2"); font-weight: 350; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-MediumItalic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-SemiBoldItalic.woff2") format("woff2"); font-weight: 600; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-ExtraBold.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-ExtraBoldItalic.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces"; src: url("../fonts/RoxMonoTypefaces-BlackItalic.woff2") format("woff2"); font-weight: 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-Thin.woff2") format("woff2"); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-ThinItalic.woff2") format("woff2"); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-ExtraLight.woff2") format("woff2"); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-ExtraLightItalic.woff2") format("woff2"); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-Light.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-LightItalic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-SemiLight.woff2") format("woff2"); font-weight: 350; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-SemiLightItalic.woff2") format("woff2"); font-weight: 350; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-Italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-Medium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-MediumItalic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-SemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-SemiBoldItalic.woff2") format("woff2"); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-Bold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-BoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-ExtraBold.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-ExtraBoldItalic.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-Black.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface"; src: url("../fonts/RoxMonoTypeface-BlackItalic.woff2") format("woff2"); font-weight: 900; font-style: italic; font-display: swap; }
 
 /* Semi-Condensed */
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedThin.woff2") format("woff2"); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedThinItalic.woff2") format("woff2"); font-weight: 100; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedExtraLight.woff2") format("woff2"); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedExtraLightItalic.woff2") format("woff2"); font-weight: 200; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedLight.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedLightItalic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedSemiLight.woff2") format("woff2"); font-weight: 350; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedSemiLightItalic.woff2") format("woff2"); font-weight: 350; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensed.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedItalic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedMedium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedMediumItalic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedSemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedSemiBoldItalic.woff2") format("woff2"); font-weight: 600; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedBold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedBoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedExtraBold.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedExtraBoldItalic.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedBlack.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Rox Mono Typefaces SC"; src: url("../fonts/RoxMonoTypefaces-SemiCondensedBlackItalic.woff2") format("woff2"); font-weight: 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedThin.woff2") format("woff2"); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedThinItalic.woff2") format("woff2"); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedExtraLight.woff2") format("woff2"); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedExtraLightItalic.woff2") format("woff2"); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedLight.woff2") format("woff2"); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedLightItalic.woff2") format("woff2"); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedSemiLight.woff2") format("woff2"); font-weight: 350; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedSemiLightItalic.woff2") format("woff2"); font-weight: 350; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensed.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedItalic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedMedium.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedMediumItalic.woff2") format("woff2"); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedSemiBold.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedSemiBoldItalic.woff2") format("woff2"); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedBold.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedBoldItalic.woff2") format("woff2"); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedExtraBold.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedExtraBoldItalic.woff2") format("woff2"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedBlack.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Rox Mono Typeface SC"; src: url("../fonts/RoxMonoTypeface-SemiCondensedBlackItalic.woff2") format("woff2"); font-weight: 900; font-style: italic; font-display: swap; }
 
 /* Width classes */
-html.sc { --m: "Rox Mono Typefaces SC", "IBM Plex Mono", "Cascadia Code", "JetBrains Mono", monospace; }
+html.sc { --m: "Rox Mono Typeface SC", "IBM Plex Mono", "Cascadia Code", "JetBrains Mono", monospace; }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
@@ -868,7 +868,7 @@ strong { font-weight: 600; color: var(--text); }
 .split-diff-content .token.atrule { color: var(--syn-bool); font-weight: 600; }
 .split-diff-content .token.function,
 .split-diff-content .token.class-name { color: var(--syn-fn); }
-/* Right-align the label so the clipped Rox Mono Typefaces layer doesn't cover it.
+/* Right-align the label so the clipped Rox Mono Typeface layer doesn't cover it.
    width:auto keeps it inside the visible area; <pre> won't wrap anyway. */
 .split-diff-layer--after .split-diff-content {
   width: auto;

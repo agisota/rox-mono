@@ -352,7 +352,7 @@ const trySamplesData = {
         '        <time datetime="2026-05-26">May 26</time>',
         '    </header>',
         '    <section class="content">',
-        '        <p>Styled with <strong>Rox Mono Typefaces</strong>.</p>',
+        '        <p>Styled with <strong>Rox Mono Typeface</strong>.</p>',
         '        <pre><code>npm run build</code></pre>',
         '    </section>',
         '</article>',
@@ -705,7 +705,7 @@ if (ligaturesBtn) {
 const configSnippets = {
   vscode: `// VS Code / Cursor: settings.json
 {
-  "editor.fontFamily": "'Rox Mono Typefaces', monospace",
+  "editor.fontFamily": "'Rox Mono Typeface', monospace",
   "editor.fontLigatures": true,
   "editor.fontWeight": "400",
   "editor.fontSize": 14.5,
@@ -713,31 +713,31 @@ const configSnippets = {
 }`,
   zed: `// Zed: settings.json
 {
-  "buffer_font_family": "Rox Mono Typefaces",
+  "buffer_font_family": "Rox Mono Typeface",
   "buffer_font_size": 15,
   "buffer_line_height": "comfortable"
 }`,
   ghostty: `# Ghostty: конфиг
-font-family = Rox Mono Typefaces
+font-family = Rox Mono Typeface
 font-size = 14`,
   kitty: `# Kitty: kitty.conf
-font_family      Rox Mono Typefaces Term
+font_family      Rox Mono Typeface Term
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
 font_size        14.0`,
   alacritty: `# Alacritty: alacritty.toml
 [font.normal]
-family = "Rox Mono Typefaces"
+family = "Rox Mono Typeface"
 style = "Regular"`,
   wezterm: `-- WezTerm: wezterm.lua
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
-config.font = wezterm.font('Rox Mono Typefaces')
+config.font = wezterm.font('Rox Mono Typeface')
 config.font_size = 14.0
 return config`,
   neovim: `-- Neovim GUI (Neovide / Goneovim)
-vim.opt.guifont = "RoxMonoTypefaces Nerd Font:h14"`
+vim.opt.guifont = "RoxMonoTypeface Nerd Font:h14"`
 };
 
 (function initConfigTabs() {

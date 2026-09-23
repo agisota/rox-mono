@@ -1,7 +1,7 @@
-# Rox Mono Typefaces
+# Rox Mono Typeface
 
 <p align="center">
-  <img src="assets/SocialPreview.png" alt="Rox Mono Typefaces — открытая программная гарнитура" width="100%">
+  <img src="assets/SocialPreview.png" alt="Rox Mono Typeface — открытая программная гарнитура" width="100%">
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-  <sub>Rox Mono Typefaces бесплатен. Звёзды репозиторию, ваши примеры настроек, отчёты об ошибках и вклад в развитие — всё это помогает проекту расти.</sub>
+  <sub>Rox Mono Typeface бесплатен. Звёзды репозиторию, ваши примеры настроек, отчёты об ошибках и вклад в развитие — всё это помогает проекту расти.</sub>
 </p>
 
 <p align="center">
@@ -38,23 +38,23 @@
 
 ## Загрузки и варианты
 
-Не знаете, какой файл выбрать? Начните с **[`RoxMonoTypefaces.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces.zip)** для редактора или **[`RoxMonoTypefaces-Term.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Term.zip)** для терминала.
+Не знаете, какой файл выбрать? Начните с **[`RoxMonoTypeface.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface.zip)** для редактора или **[`RoxMonoTypeface-Term.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-Term.zip)** для терминала.
 
 | Пакет | Лучше всего подходит | Лигатуры | Иконки Nerd Font |
 |---|---|:---:|:---:|
-| **[`RoxMonoTypefaces.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces.zip)** | VS Code, JetBrains IDEs, Zed, Sublime Text, Cursor | Да | Нет |
-| **[`RoxMonoTypefaces-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-NerdFont.zip)** | Редакторы, которым нужны патченые символы и иконки | Да | Да |
-| **[`RoxMonoTypefaces-Term.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Term.zip)** | Kitty, Ghostty, WezTerm, Alacritty | Да | Нет |
-| **[`RoxMonoTypefaces-Term-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Term-NerdFont.zip)** | Терминалы, промпты и консольные редакторы, которым нужны иконки | Да | Да |
-| **[`RoxMonoTypefaces-NL.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-NL.zip)** | Приложения, в которых нельзя отключить лигатуры, включая Xcode | Нет | Нет |
-| **[`RoxMonoTypefaces-NL-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-NL-NerdFont.zip)** | Семейство без лигатур с патчеными символами и иконками | Нет | Да |
-| **[`RoxMonoTypefaces-Web.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Web.zip)** | Сайты с латинским текстом, пунктуацией, стрелками, математикой или блочной графикой | Да | Нет |
-| **[`RoxMonoTypefaces-Web-Full.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypefaces-Web-Full.zip)** | Сайты, которым нужен полный набор глифов десктопной версии | Да | Нет |
+| **[`RoxMonoTypeface.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface.zip)** | VS Code, JetBrains IDEs, Zed, Sublime Text, Cursor | Да | Нет |
+| **[`RoxMonoTypeface-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-NerdFont.zip)** | Редакторы, которым нужны патченые символы и иконки | Да | Да |
+| **[`RoxMonoTypeface-Term.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-Term.zip)** | Kitty, Ghostty, WezTerm, Alacritty | Да | Нет |
+| **[`RoxMonoTypeface-Term-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-Term-NerdFont.zip)** | Терминалы, промпты и консольные редакторы, которым нужны иконки | Да | Да |
+| **[`RoxMonoTypeface-NL.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-NL.zip)** | Приложения, в которых нельзя отключить лигатуры, включая Xcode | Нет | Нет |
+| **[`RoxMonoTypeface-NL-NerdFont.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-NL-NerdFont.zip)** | Семейство без лигатур с патчеными символами и иконками | Нет | Да |
+| **[`RoxMonoTypeface-Web.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-Web.zip)** | Сайты с латинским текстом, пунктуацией, стрелками, математикой или блочной графикой | Да | Нет |
+| **[`RoxMonoTypeface-Web-Full.zip`](https://github.com/agisota/rox-mono/releases/latest/download/RoxMonoTypeface-Web-Full.zip)** | Сайты, которым нужен полный набор глифов десктопной версии | Да | Нет |
 
 > [!TIP]
 > **Работаете в терминале?** Выберите пакет `Term`. Его метрики сохраняют стрелки и символы блочной графики внутри своих ячеек.
 >
-> **Делаете сайт?** Начните с `RoxMonoTypefaces-Web.zip`. Выбирайте `Web-Full` только если нужны греческий алфавит, кириллица, длинные стрелки или редкие математические символы. Оба веб-архива используют одинаковые имена файлов, поэтому для переключения между ними не нужны новые правила `@font-face`.
+> **Делаете сайт?** Начните с `RoxMonoTypeface-Web.zip`. Выбирайте `Web-Full` только если нужны греческий алфавит, кириллица, длинные стрелки или редкие математические символы. Оба веб-архива используют одинаковые имена файлов, поэтому для переключения между ними не нужны новые правила `@font-face`.
 
 ### Выберите ширину
 
@@ -96,7 +96,7 @@ SemiCondensed/
 
 ## Дизайн
 
-Rox Mono Typefaces — не стоковая сборка. Её [план сборки](./private-build-plans.toml) определяет формы глифов, ширины, наклоны, межсимвольные интервалы и вертикальные метрики, используемые во всём семействе.
+Rox Mono Typeface — не стоковая сборка. Её [план сборки](./private-build-plans.toml) определяет формы глифов, ширины, наклоны, межсимвольные интервалы и вертикальные метрики, используемые во всём семействе.
 
 В дизайне уравновешены три идеи:
 
@@ -106,25 +106,25 @@ Rox Mono Typefaces — не стоковая сборка. Её [план сбо
 
 ### Сравнение деталей
 
-Ниже показано, как глифы Rox Mono Typefaces соотносятся с глифами Berkeley Mono и чем две гарнитуры различаются.
+Ниже показано, как глифы Rox Mono Typeface соотносятся с глифами Berkeley Mono и чем две гарнитуры различаются.
 
 #### Формы знаков
 
 Сравнение цифр, пунктуации, скобок и распространённых программных знаков.
 
-![Сравнение форм знаков Rox Mono Typefaces и Berkeley Mono](assets/01-RoxMonoTypefaces-vs-Berkeley-Character-Forms.png)
+![Сравнение форм знаков Rox Mono Typeface и Berkeley Mono](assets/01-RoxMonoTypeface-vs-Berkeley-Character-Forms.png)
 
 #### Наложение
 
 Наложение глифов друг на друга для проверки базовых линий, пропорций, общих областей и заметных различий контуров.
 
-![Исследование наложения пикселей Rox Mono Typefaces и Berkeley Mono](assets/02-RoxMonoTypefaces-vs-Berkeley-Pixel-Overlay.png)
+![Исследование наложения пикселей Rox Mono Typeface и Berkeley Mono](assets/02-RoxMonoTypeface-vs-Berkeley-Pixel-Overlay.png)
 
 #### Плотность кода
 
 Образец реального кода, сравнивающий ритм строк, интервалы и визуальный вес в редакторе.
 
-![Сравнение на реальном коде Rox Mono Typefaces и Berkeley Mono](assets/03-RoxMonoTypefaces-vs-Berkeley-Real-Code.png)
+![Сравнение на реальном коде Rox Mono Typeface и Berkeley Mono](assets/03-RoxMonoTypeface-vs-Berkeley-Real-Code.png)
 
 ## Толщины
 
@@ -152,10 +152,10 @@ Rox Mono Typefaces — не стоковая сборка. Её [план сбо
 | macOS | [Homebrew](https://formulae.brew.sh/cask/font-roxmono-mono) | `brew install --cask font-roxmono-mono` |
 | Nix / NixOS | [nixpkgs](https://github.com/NixOS/nixpkgs/tree/master/pkgs/data/fonts/roxmono-mono) | `nix profile install nixpkgs#roxmono-mono.normal` |
 | Arch Linux | [AUR](https://aur.archlinux.org/packages/ttf-roxmono-mono) | Пакет: `ttf-roxmono-mono` |
-| Slackware | [SlackBuilds.org](https://slackbuilds.org/repository/15.0/system/RoxMonoTypefaces/) | Пакет: `RoxMonoTypefaces` |
+| Slackware | [SlackBuilds.org](https://slackbuilds.org/repository/15.0/system/RoxMonoTypeface/) | Пакет: `RoxMonoTypeface` |
 
 > [!NOTE]
-> Репозитории пакетов обновляются по собственному расписанию и не всегда содержат последний выпуск Rox Mono Typefaces. Страница [GitHub Releases](https://github.com/agisota/rox-mono/releases/latest) — источник актуальных сборок и всех доступных вариантов.
+> Репозитории пакетов обновляются по собственному расписанию и не всегда содержат последний выпуск Rox Mono Typeface. Страница [GitHub Releases](https://github.com/agisota/rox-mono/releases/latest) — источник актуальных сборок и всех доступных вариантов.
 
 Спасибо [@zhimoe](https://github.com/zhimoe), [@ForsakenHarmony](https://github.com/ForsakenHarmony) и [@frovere](https://github.com/frovere) за помощь с публикацией в Homebrew.
 
@@ -163,7 +163,7 @@ Rox Mono Typefaces — не стоковая сборка. Её [план сбо
 
 - **macOS:** Распакуйте архив, выберите файлы `.ttf` из папки нужной ширины и варианта рендеринга, откройте их в приложении Font Book и нажмите **Установить**.
 - **Windows:** Распакуйте архив, выберите файлы `.ttf`, щёлкните по ним правой кнопкой и выберите **Install for all users** («Установить для всех пользователей»).
-- **Linux:** Скопируйте выбранные файлы `.ttf` в `~/.local/share/fonts/RoxMonoTypefaces/`, затем выполните `fc-cache -fv`.
+- **Linux:** Скопируйте выбранные файлы `.ttf` в `~/.local/share/fonts/RoxMonoTypeface/`, затем выполните `fc-cache -fv`.
 
 После установки перезапустите открытые приложения, чтобы они обновили списки шрифтов.
 
@@ -173,18 +173,18 @@ Rox Mono Typefaces — не стоковая сборка. Её [план сбо
 
 | Пакет | Гарнитура |
 |---|---|
-| Standard | `Rox Mono Typefaces` |
-| Standard Nerd Font | `RoxMonoTypefaces Nerd Font Mono` |
-| Term | `Rox Mono Typefaces Term` |
-| Term Nerd Font | `RoxMonoTypefacesTerm Nerd Font Mono` |
-| No Ligatures | `Rox Mono Typefaces NL` |
-| No Ligatures Nerd Font | `RoxMonoTypefacesNL Nerd Font Mono` |
+| Standard | `Rox Mono Typeface` |
+| Standard Nerd Font | `RoxMonoTypeface Nerd Font Mono` |
+| Term | `Rox Mono Typeface Term` |
+| Term Nerd Font | `RoxMonoTypefaceTerm Nerd Font Mono` |
+| No Ligatures | `Rox Mono Typeface NL` |
+| No Ligatures Nerd Font | `RoxMonoTypefaceNL Nerd Font Mono` |
 
 ### VS Code / Cursor
 
 ```json
 {
-  "editor.fontFamily": "'Rox Mono Typefaces', monospace",
+  "editor.fontFamily": "'Rox Mono Typeface', monospace",
   "editor.fontLigatures": true,
   "editor.fontWeight": "400",
   "editor.fontSize": 14.5,
@@ -196,7 +196,7 @@ Rox Mono Typefaces — не стоковая сборка. Её [план сбо
 
 ```json
 {
-  "buffer_font_family": "Rox Mono Typefaces",
+  "buffer_font_family": "Rox Mono Typeface",
   "buffer_font_size": 15,
   "buffer_line_height": "comfortable"
 }
@@ -205,7 +205,7 @@ Rox Mono Typefaces — не стоковая сборка. Её [план сбо
 ### Ghostty
 
 ```ini
-font-family = Rox Mono Typefaces Term
+font-family = Rox Mono Typeface Term
 font-size = 14
 ```
 
@@ -213,14 +213,14 @@ font-size = 14
 
 ```toml
 [font.normal]
-family = "Rox Mono Typefaces Term"
+family = "Rox Mono Typeface Term"
 style = "Regular"
 ```
 
 ### Kitty
 
 ```conf
-font_family      Rox Mono Typefaces Term
+font_family      Rox Mono Typeface Term
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
@@ -229,7 +229,7 @@ font_size        14.0
 
 ## Возможности OpenType
 
-Rox Mono Typefaces поддерживает функции OpenType, которые совместимые приложения могут включать и отключать.
+Rox Mono Typeface поддерживает функции OpenType, которые совместимые приложения могут включать и отключать.
 
 | Функция | Действие |
 |---|---|
@@ -251,7 +251,7 @@ font-feature = zero
 
 ```conf
 # Kitty
-font_features RoxMonoTypefacesTerm +zero
+font_features RoxMonoTypefaceTerm +zero
 ```
 
 ```css
@@ -268,12 +268,12 @@ font-feature-settings: "zero";
 git clone https://github.com/agisota/rox-mono.git
 
 # Copy the custom build plan
-cp RoxMonoTypefaces/private-build-plans.toml RoxMonoTypeface/
+cp RoxMonoTypeface/private-build-plans.toml RoxMonoTypeface/
 
 # Install dependencies and build every family
 cd RoxMonoTypeface
 npm install
-npm run build -- contents::RoxMonoTypefaces contents::RoxMonoTypefacesTerm contents::RoxMonoTypefacesNL contents::RoxMonoTypefacesWeb
+npm run build -- contents::RoxMonoTypeface contents::RoxMonoTypefaceTerm contents::RoxMonoTypefaceNL contents::RoxMonoTypefaceWeb
 ```
 
 Скомпилированные файлы записываются в `RoxMonoTypeface/dist/<PlanName>/`. Релизный workflow также создаёт варианты с хинтингом, Nerd Font и упакованные архивы для скачивания.

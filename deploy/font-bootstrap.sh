@@ -1,20 +1,24 @@
 #!/bin/bash
-# Bootstrap font.rox.one on a Debian/Ubuntu node: opens the guest firewall,
-# ensures sshd, installs nginx + self-signed TLS, deploys the site from GitHub main.
-# Idempotent; runs as root via GCE startup-script metadata (or manually).
-set -euo pipefail
+# Bootstrap font.rox.one on a Debian node: tear down the guest firewall that
+# drops ALL inbound, ensure sshd, install nginx + self-signed TLS, deploy the
+# site from GitHub main. Idempotent; runs as root via GCE startup-script metadata.
+set -uo pipefail
 exec > >(logger -t font-bootstrap) 2>&1
 
-# --- guest firewall: this VM dropped all inbound; open ssh + web ---
-if command -v ufw >/dev/null 2>&1; then
-  ufw allow 22/tcp || true
-  ufw allow 80/tcp || true
-  ufw allow 443/tcp || true
-fi
+# --- beacon: proves this script ran (readable via guest attributes) ---
+curl -s -m 5 -X PUT --data "ran-$(date -u +%FT%TZ)" \
+  -H "Metadata-Flavor: Google" \
+  "http://metadata.google.internal/computeMetadata/v1/guest-attributes/font-bootstrap/status" || true
+
+# --- firewall: this VM drops ALL inbound incl. ICMP; bring the filters down ---
+command -v ufw >/dev/null 2>&1 && ufw disable || true
+systemctl disable --now nftables 2>/dev/null || true
+systemctl disable --now firewalld 2>/dev/null || true
+command -v nft >/dev/null 2>&1 && nft flush ruleset || true
 if command -v iptables >/dev/null 2>&1; then
-  iptables -C INPUT -p tcp --dport 22 -j ACCEPT 2>/dev/null || iptables -I INPUT 1 -p tcp --dport 22 -j ACCEPT
-  iptables -C INPUT -p tcp --dport 80 -j ACCEPT 2>/dev/null || iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
-  iptables -C INPUT -p tcp --dport 443 -j ACCEPT 2>/dev/null || iptables -I INPUT 1 -p tcp --dport 443 -j ACCEPT
+  iptables -P INPUT ACCEPT || true
+  iptables -F INPUT || true
+  iptables -P FORWARD ACCEPT || true
 fi
 
 # --- sshd: make the box administrable again ---
